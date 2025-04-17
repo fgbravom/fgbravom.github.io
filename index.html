@@ -111,7 +111,7 @@
     const telefono = form.telefono.value;
     const mensaje = form.mensaje.value;
 
-    const res = await fetch("/api/insert", {
+    const res = await fetch("/api/contacto", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nombre, correo, telefono, mensaje}),
