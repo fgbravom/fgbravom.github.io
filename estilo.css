@@ -134,3 +134,95 @@
   padding: 0.5em;
   font-size: 1rem;
 }
+
+/* Estilo general del cuerpo */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sección de contacto */
+#contacto {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del formulario */
+#contacto h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+/* Estilo del formulario */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etiquetas del formulario */
+#contactForm label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555555;
+}
+
+/* Campos de entrada y área de texto */
+#contactForm input,
+#contactForm textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+/* Efecto al enfocar los campos */
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Botón de envío */
+#contactForm button {
+  padding: 12px;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+#contactForm button:hover {
+  background-color: #0056b3;
+}
+
+/* Mensaje de estado de envío */
+#estadoEnvio {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #28a745; /* Verde para éxito */
+}
+
+/* Mensaje de error */
+#estadoEnvio.error {
+  color: #dc3545; /* Rojo para error */
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  #contacto {
+    padding: 20px;
+  }
+}
