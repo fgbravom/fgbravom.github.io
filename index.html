@@ -109,20 +109,29 @@
       const correo = form.correo.value;
       const telefono = form.telefono.value;
       const mensaje = form.mensaje.value;
-
-      const res = await fetch("https://notion-contact-api.vercel.app/api/contacto", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nombre, correo, telefono, mensaje }),
-      });
-
-      const data = await res.json();
-      const estado = document.getElementById("estadoEnvio");
-      estado.textContent = res.ok
-        ? "✅ ¡Mensaje enviado correctamente!"
-        : `❌ Error: ${data.error?.message || "No se pudo enviar"}`;
+  
+      try {
+        const res = await fetch("https://notion-contact-api.vercel.app/api/contacto", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ nombre, correo, telefono, mensaje }),
+        });
+  
+        const data = await res.json();
+  
+        if (res.ok) {
+          alert("✅ ¡Mensaje enviado correctamente!");
+          form.reset();
+          document.getElementById("estadoEnvio").textContent = "";
+        } else {
+          document.getElementById("estadoEnvio").textContent = `❌ Error: ${data.error?.message || "No se pudo enviar"}`;
+        }
+      } catch (error) {
+        document.getElementById("estadoEnvio").textContent = `❌ Error de red: ${error.message}`;
+      }
     });
   </script>
+  
 
   
   
