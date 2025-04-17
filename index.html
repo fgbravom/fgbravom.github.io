@@ -79,22 +79,21 @@
       <form id="contactForm">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required />
-
+  
         <label for="correo">Correo electrónico:</label>
         <input type="email" id="correo" name="correo" required />
-
+  
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono" name="telefono" />
-
+  
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
+  
         <button type="submit">Enviar</button>
         <p id="estadoEnvio"></p>
       </form>
     </section>
-
-    
+   
     
   </main>
 
@@ -103,27 +102,27 @@
   </footer>
 
   <script>
-  document.getElementById("contactForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const nombre = form.nombre.value;
-    const correo = form.correo.value;
-    const telefono = form.telefono.value;
-    const mensaje = form.mensaje.value;
+    document.getElementById("contactForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const nombre = form.nombre.value;
+      const correo = form.correo.value;
+      const telefono = form.telefono.value;
+      const mensaje = form.mensaje.value;
 
-    const res = await fetch("/api/contacto", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ nombre, correo, telefono, mensaje}),
+      const res = await fetch("/api/contacto", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre, correo, telefono, mensaje }),
+      });
+
+      const data = await res.json();
+      const estado = document.getElementById("estadoEnvio");
+      estado.textContent = res.ok
+        ? "✅ ¡Mensaje enviado correctamente!"
+        : `❌ Error: ${data.error?.message || "No se pudo enviar"}`;
     });
-
-    const data = await res.json();
-    const estado = document.getElementById("estadoEnvio");
-    estado.textContent = res.ok
-      ? "✅ ¡Mensaje enviado correctamente!"
-      : `❌ Error: ${data.error?.message || "No se pudo enviar"}`;
-  });
-</script>
+  </script>
 
   
   
