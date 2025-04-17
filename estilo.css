@@ -268,3 +268,78 @@ body {
 .popup-content button:hover {
   background-color: #1ea87a;
 }
+/* Navbar */
+.navbar {
+  background-color: #111;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Header centrado con avatar y datos */
+.perfil-header {
+  background-color: #000000de;
+  color: white;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.perfil-contenido {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  justify-content: center;
+}
+
+.avatar-cuadrado {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.info-personal h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.info-personal p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.info-personal a {
+  color: #78c4ff;
+  text-decoration: none;
+}
+
+.info-personal a:hover {
+  text-decoration: underline;
+}
+.icon-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.icon-links a {
+  color: #78c4ff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.icon-links a:hover {
+  color: #fff;
+}
