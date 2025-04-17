@@ -93,7 +93,7 @@
         <p id="estadoEnvio"></p>
       </form>
     </section>
-    
+
     <div id="popup" class="popup">
       <div class="popup-content">
         <p>✅ ¡Mensaje enviado correctamente!</p>
@@ -109,35 +109,45 @@
   </footer>
 
   <script>
-    document.getElementById("contactForm").addEventListener("submit", async (e) => {
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("popup");
+    const closePopup = document.getElementById("closePopup");
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const form = e.target;
+
       const nombre = form.nombre.value;
       const correo = form.correo.value;
       const telefono = form.telefono.value;
       const mensaje = form.mensaje.value;
-  
+
       try {
         const res = await fetch("https://notion-contact-api.vercel.app/api/contacto", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ nombre, correo, telefono, mensaje }),
         });
-  
+
         const data = await res.json();
-  
+
         if (res.ok) {
-          alert("✅ ¡Mensaje enviado correctamente!");
-          form.reset();
-          document.getElementById("estadoEnvio").textContent = "";
+          form.reset(); // Restablece el formulario
+          popup.style.display = "flex"; // Muestra el popup
         } else {
-          document.getElementById("estadoEnvio").textContent = `❌ Error: ${data.error?.message || "No se pudo enviar"}`;
+          alert(`❌ Error: ${data.error?.message || "No se pudo enviar"}`);
         }
       } catch (error) {
-        document.getElementById("estadoEnvio").textContent = `❌ Error de red: ${error.message}`;
+        alert(`❌ Error de red: ${error.message}`);
       }
     });
-  </script>
+
+    closePopup.addEventListener("click", () => {
+      popup.style.display = "none"; // Oculta el popup al hacer clic en "Cerrar"
+    });
+  });
+</script>
+
   
 
   
