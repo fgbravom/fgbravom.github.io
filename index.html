@@ -103,40 +103,27 @@
   </footer>
 
   <script>
-  document.getElementById("contactForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
-  const estado = document.getElementById("estadoEnvio");
-  estado.textContent = "Enviando... 📤";
+  document.getElementById("contactForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const nombre = form.nombre.value;
+    const correo = form.correo.value;
+    const telefono = form.telefono.value;
+    const mensaje = form.mensaje.value;
 
-  const data = {
-    nombre: document.getElementById("nombre").value,
-    correo: document.getElementById("correo").value,
-    telefono: document.getElementById("telefono").value,
-    mensaje: document.getElementById("mensaje").value
-  };
-
-  try {
-    const response = await fetch("https://notion-contact-api.vercel.app/api/contacto", {
+    const res = await fetch("/api/insert", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
+      body: JSON.stringify({ nombre, correo, telefono, mensaje }),
     });
 
-    const result = await response.json();
-
-    if (response.ok) {
-      estado.textContent = "Mensaje enviado con éxito ✅";
-      document.getElementById("contactForm").reset();
-    } else {
-      estado.textContent = "Error al enviar el mensaje ❌";
-      console.error(result.error);
-    }
-  } catch (error) {
-    estado.textContent = "Error de conexión ❌";
-    console.error(error);
-  }
-});
-  </script>
+    const data = await res.json();
+    const estado = document.getElementById("estadoEnvio");
+    estado.textContent = res.ok
+      ? "✅ ¡Mensaje enviado correctamente!"
+      : `❌ Error: ${data.error?.message || "No se pudo enviar"}`;
+  });
+</script>
 
   
   
