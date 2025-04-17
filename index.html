@@ -114,7 +114,7 @@
     const res = await fetch("/api/insert", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ nombre, correo, telefono, mensaje }),
+      body: JSON.stringify({ nombre, correo, teléfono, mensaje }),
     });
 
     const data = await res.json();
