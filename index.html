@@ -75,21 +75,25 @@
     </section>
 
     <section id="contacto">
-  <h2>Contacto</h2>
-  <form id="form-contacto">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required />
-
-    <label for="correo">Correo electrónico:</label>
-    <input type="email" id="correo" name="correo" required />
-
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-    <button type="submit">Enviar</button>
-    <p id="estado-envio"></p>
-  </form>
-</section>
+      <h2>Contacto</h2>
+      <form id="form-contacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+    
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required />
+    
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required />
+    
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+    
+        <button type="submit">Enviar</button>
+        <p id="estado-envio"></p>
+      </form>
+    </section>
+    
 
     
     
@@ -109,6 +113,7 @@
       const data = {
         nombre: form.nombre.value,
         correo: form.correo.value,
+        telefono: form.telefono.value,
         mensaje: form.mensaje.value,
       };
   
@@ -132,6 +137,7 @@
       }
     });
   </script>
+  
   
 </body>
 </html>
