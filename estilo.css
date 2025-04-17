@@ -145,7 +145,7 @@ body {
 
 /* Sección de contacto */
 #contacto {
-  max-width: 600px;
+  max-width:100%;
   margin: 50px auto;
   padding: 30px;
   background-color: #ffffff;
