@@ -1,0 +1,465 @@
+/* ===== RESET Y CONFIGURACIÓN BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== CONFIGURACIÓN DE TAILWIND ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ===== ANIMACIONES PERSONALIZADAS ===== */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* ===== EFECTOS PARALLAX ===== */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-bg-1 {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+  z-index: -3;
+}
+
+.parallax-bg-2 {
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 2px, transparent 2px),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 2px, transparent 2px);
+  background-size: 60px 60px, 80px 80px;
+  z-index: -2;
+}
+
+.parallax-bg-3 {
+  background-image: 
+    radial-gradient(circle at 60% 40%, rgba(255,255,255,0.05) 1px, transparent 1px),
+    radial-gradient(circle at 40% 60%, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px, 50px 50px;
+  z-index: -1;
+}
+
+/* ===== NAVEGACIÓN ===== */
+.navbar {
+  background-color: #000000de;
+  border-bottom: 1px solid #333;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ccc;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4rem 1rem;
+}
+
+.hero-avatar {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border: 4px solid white;
+  transition: transform 0.3s ease;
+}
+
+.hero-avatar:hover {
+  transform: scale(1.05);
+}
+
+/* ===== SECCIONES DE CONTENIDO ===== */
+.content-section {
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border: 1px solid #e5e7eb;
+  padding: 2rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: #d1d5db;
+}
+
+.section-icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #d1d5db, #9ca3af, #6b7280);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== TARJETAS DE PROYECTOS ===== */
+.project-card {
+  display: block;
+  padding: 1.5rem;
+  background: rgba(31, 41, 55, 0.5);
+  border-radius: 0.75rem;
+  border: 1px solid #4b5563;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.project-card:hover {
+  background: rgba(55, 65, 81, 0.5);
+  border-color: #6b7280;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.project-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #d1d5db;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-title {
+  color: #e5e7eb;
+}
+
+/* ===== GRID DE TECNOLOGÍAS ===== */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(31, 41, 55, 0.5);
+  border-radius: 0.75rem;
+  border: 1px solid #4b5563;
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+  background: rgba(55, 65, 81, 0.5);
+  border-color: #6b7280;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+.tech-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-item:hover .tech-icon {
+  transform: scale(1.1);
+}
+
+.tech-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #d1d5db;
+  text-align: center;
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+.contact-form {
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #d1d5db;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #4b5563;
+  border-radius: 0.5rem;
+  background: #1f2937;
+  color: #d1d5db;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #9ca3af;
+  box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.1);
+}
+
+.form-textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: #374151;
+  color: #d1d5db;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #4b5563;
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.1);
+}
+
+/* ===== POPUP DE CONFIRMACIÓN ===== */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.popup-content {
+  background: #1f2937;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 28rem;
+  margin: 0 1rem;
+  text-align: center;
+}
+
+.popup-icon {
+  font-size: 3.75rem;
+  margin-bottom: 1rem;
+}
+
+.popup-message {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+}
+
+.popup-button {
+  padding: 0.75rem 1.5rem;
+  background: #374151;
+  color: #d1d5db;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup-button:hover {
+  background: #4b5563;
+}
+
+/* ===== SCROLL INDICATOR ===== */
+.scroll-indicator {
+  margin-top: 3rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.scroll-indicator-inner {
+  width: 1.5rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.scroll-indicator-dot {
+  width: 0.25rem;
+  height: 0.75rem;
+  background: white;
+  border-radius: 9999px;
+  margin-top: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: black;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .parallax-layer {
+    background-attachment: scroll;
+  }
+  
+  .hero-avatar {
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .content-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .tech-item {
+    padding: 0.75rem;
+  }
+  
+  .tech-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* ===== UTILIDADES ===== */
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+.space-x-4 > * + * {
+  margin-left: 1rem;
+}
+
+.space-x-6 > * + * {
+  margin-left: 1.5rem;
+}
+
+section#contacto.bg-card-translucido {
+  background: rgba(31,41,55,0.5) !important;
+}
+
+p, span, div, label, textarea, input, button {
+  font-weight: normal !important;
+}
+
+h1, h2, h3 {
+  font-weight: bold !important;
+} 
