@@ -3,129 +3,359 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Felipe Bravo Miranda</title>
-  <link rel="stylesheet" href="estilo.css" />
+  <title>Felipe Bravo Miranda - Analista de Sistemas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-          
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-in-out',
+            'slide-up': 'slideUp 0.6s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(30px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .parallax-container {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .parallax-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    .parallax-bg-1 {
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+      z-index: -3;
+    }
+    
+    .parallax-bg-2 {
+      background-image: 
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 2px, transparent 2px),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 2px, transparent 2px);
+      background-size: 60px 60px, 80px 80px;
+      z-index: -2;
+    }
+    
+    .parallax-bg-3 {
+      background-image: 
+        radial-gradient(circle at 60% 40%, rgba(255,255,255,0.05) 1px, transparent 1px),
+        radial-gradient(circle at 40% 60%, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 40px 40px, 50px 50px;
+      z-index: -1;
+    }
+    
+    @media (max-width: 768px) {
+      .parallax-layer {
+        background-attachment: scroll;
+      }
+    }
+  </style>
 </head>
-<body>
-  <nav class="navbar">
-    <div class="navbar-brand">fgbravom</div>
+<body class="bg-white font-inter text-black">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-black border-b border-gray-800">
+    <div class="max-w-4xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-xl font-semibold text-white hover:text-gray-300 transition-colors" id="logo-link">fgbravom</a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-6">
+          <a href="#sobre-mi" class="text-gray-300 hover:text-white transition-colors">Sobre mí</a>
+          <a href="#proyectos" class="text-gray-300 hover:text-white transition-colors">Proyectos</a>
+          <a href="#tecnologias" class="text-gray-300 hover:text-white transition-colors">Tecnologías</a>
+          <a href="#contacto" class="text-gray-300 hover:text-white transition-colors">Contacto</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="md:hidden hidden absolute left-0 right-0 top-full bg-black border-b border-gray-800 shadow-lg pb-4 z-50">
+        <div class="flex flex-col space-y-3 px-6 pt-4">
+          <a href="#sobre-mi" class="text-gray-300 hover:text-white transition-colors py-2">Sobre mí</a>
+          <a href="#proyectos" class="text-gray-300 hover:text-white transition-colors py-2">Proyectos</a>
+          <a href="#tecnologias" class="text-gray-300 hover:text-white transition-colors py-2">Tecnologías</a>
+          <a href="#contacto" class="text-gray-300 hover:text-white transition-colors py-2">Contacto</a>
+        </div>
+      </div>
+    </div>
   </nav>
   
-  <header class="perfil-header">
-    <div class="perfil-contenido">
-      <img src="assets/images/perfil.jpg" alt="Felipe Bravo" class="avatar-cuadrado" />
-      <div class="info-personal">
-        <h1>Felipe Bravo Miranda</h1>
-        <p>@fgbravom</p>
-        <p class="icon-links">
-          <a href="https://github.com/fgbravom" target="_blank" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="mailto:tu-correo@ejemplo.com" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </p>        
+  <!-- Hero Section with Parallax -->
+  <header class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-16 md:py-24 parallax-container">
+    <!-- Multiple Parallax Layers -->
+    <div class="parallax-layer parallax-bg-1" data-speed="0.1"></div>
+    <div class="parallax-layer parallax-bg-2" data-speed="0.3"></div>
+    <div class="parallax-layer parallax-bg-3" data-speed="0.5"></div>
+    
+    <!-- Content -->
+    <div class="relative z-10 w-full flex flex-col items-center">
+      <!-- Presentación principal -->
+      <div class="max-w-4xl mx-auto px-6 text-center animate-fade-in">
+        <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+          <div class="relative animate-slide-up">
+            <img src="assets/images/perfil.jpg" alt="Felipe Bravo" class="w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover shadow-2xl border-4 border-white" />
+          </div>
+          <div class="text-left animate-slide-up" style="animation-delay: 0.2s;">
+            <h1 class="text-4xl md:text-5xl font-bold mb-2 text-white">Felipe Bravo Miranda</h1>
+            <p class="text-xl text-gray-300 mb-4">@fgbravom</p>
+            <p class="text-lg text-gray-400 mb-6 max-w-md">Analista de Sistemas en Daia Systems. Especialista en documentación, automatización y desarrollo de herramientas internas.</p>
+            <div class="flex space-x-4">
+              <a href="https://github.com/fgbravom" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                <i class="fab fa-github text-2xl"></i>
+              </a>
+              <a href="mailto:tu-correo@ejemplo.com" class="text-gray-300 hover:text-white transition-colors">
+                <i class="fas fa-envelope text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div id="scroll-indicator" class="mt-12 animate-bounce transition-all duration-500 ease-in-out">
+        <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+          <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+      
+      <!-- Grid de tarjetas -->
+      <div class="w-full max-w-6xl mt-12 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div class="flex flex-col gap-10">
+            <!-- Sobre mí -->
+            <section id="sobre-mi" class="bg-transparent rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow animate-fade-in">
+              <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-300 animate-slide-up">
+                <span class="text-2xl mr-3">👨‍💻</span>
+                <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Sobre mí</span>
+              </h2>
+              <div class="prose max-w-none">
+                <p class="text-lg text-gray-400 leading-relaxed mb-4 animate-fade-in" style="animation-delay:0.1s;">
+                  Trabajo en <strong class="text-gray-300">Daia Systems</strong> como Analista de Sistemas. Me especializo en documentación, automatización de procesos, desarrollo de herramientas internas y soporte técnico.
+                </p>
+                <p class="text-lg text-gray-400 leading-relaxed animate-fade-in" style="animation-delay:0.2s;">
+                  Mi experiencia incluye el desarrollo de <code class="bg-gray-800 px-2 py-1 rounded text-sm font-mono border border-gray-600 text-gray-300">help.daia.cl</code>, un portal de documentación corporativa, así como la creación de herramientas de automatización para optimizar flujos de trabajo.
+                </p>
+              </div>
+            </section>
+            <!-- Contacto -->
+            <section id="contacto" class="bg-transparent rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow animate-fade-in">
+              <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-300 animate-slide-up">
+                <span class="text-2xl mr-3">📫</span>
+                <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Contacto</span>
+              </h2>
+              <form id="contactForm" class="max-w-2xl mx-auto space-y-6">
+                <div>
+                  <label for="nombre" class="block text-sm font-medium text-gray-300 mb-2">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" required 
+                         class="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-colors bg-gray-800 text-gray-300 placeholder-gray-500" />
+                </div>
+                <div>
+                  <label for="correo" class="block text-sm font-medium text-gray-300 mb-2">Correo electrónico</label>
+                  <input type="email" id="correo" name="correo" required 
+                         class="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-colors bg-gray-800 text-gray-300 placeholder-gray-500" />
+                </div>
+                <div>
+                  <label for="telefono" class="block text-sm font-medium text-gray-300 mb-2">Teléfono</label>
+                  <input type="tel" id="telefono" name="telefono" 
+                         class="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-colors bg-gray-800 text-gray-300 placeholder-gray-500" />
+                </div>
+                <div>
+                  <label for="mensaje" class="block text-sm font-medium text-gray-300 mb-2">Mensaje</label>
+                  <textarea id="mensaje" name="mensaje" rows="5" required 
+                            class="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-colors bg-gray-800 text-gray-300 placeholder-gray-500 resize-none"></textarea>
+                </div>
+                <button type="submit" 
+                        class="w-full bg-gray-700 text-gray-300 py-3 px-6 rounded-lg font-medium hover:bg-gray-600 transition-colors focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                  Enviar mensaje
+                </button>
+                <p id="estadoEnvio" class="text-center"></p>
+              </form>
+              <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div class="bg-gray-800 rounded-2xl p-8 max-w-md mx-4 text-center">
+                  <div class="text-6xl mb-4">✅</div>
+                  <p class="text-lg font-medium text-gray-300 mb-6">¡Mensaje enviado correctamente!</p>
+                  <button id="closePopup" 
+                          class="bg-gray-700 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-600 transition-colors">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="flex flex-col gap-10">
+            <!-- Proyectos Destacados -->
+            <section id="proyectos" class="bg-transparent rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow animate-fade-in">
+              <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-300 animate-slide-up">
+                <span class="text-2xl mr-3">📌</span>
+                <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Proyectos Destacados</span>
+              </h2>
+              <div class="grid gap-4">
+                <a href="https://github.com/fgbravom/bookmark-converter" target="_blank" 
+                   class="group block p-6 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 border border-gray-600 hover:border-gray-500 hover:shadow-md animate-fade-in">
+                  <div class="flex items-center space-x-4">
+                    <div class="text-3xl">🔗</div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-300 group-hover:text-gray-200 transition-colors bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Bookmark Converter</h3>
+                      <p class="text-gray-400 animate-fade-in">Conversor de HTML a CSV para marcadores</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://help.daia.cl" target="_blank" 
+                   class="group block p-6 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 border border-gray-600 hover:border-gray-500 hover:shadow-md animate-fade-in">
+                  <div class="flex items-center space-x-4">
+                    <div class="text-3xl">📚</div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-300 group-hover:text-gray-200 transition-colors bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Documentación Daia Systems</h3>
+                      <p class="text-gray-400 animate-fade-in">Portal de documentación corporativa</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://daia.cl" target="_blank" 
+                   class="group block p-6 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 border border-gray-600 hover:border-gray-500 hover:shadow-md animate-fade-in">
+                  <div class="flex items-center space-x-4">
+                    <div class="text-3xl">🌐</div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-300 group-hover:text-gray-200 transition-colors bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Sitio Corporativo de Daia</h3>
+                      <p class="text-gray-400 animate-fade-in">Página web oficial de la empresa</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </section>
+            <!-- Tecnologías -->
+            <section id="tecnologias" class="bg-transparent rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow animate-fade-in">
+              <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-300 animate-slide-up">
+                <span class="text-2xl mr-3">🛠️</span>
+                <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Tecnologías y Plataformas</span>
+              </h2>
+              <p class="text-lg text-gray-400 mb-8 animate-fade-in">Estas son algunas de las herramientas y tecnologías con las que trabajo frecuentemente:</p>
+              <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">HTML5</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">CSS3</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">JavaScript</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">Python</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">Git</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">GitHub</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">VS Code</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">MySQL</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="Markdown" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">Markdown</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">AWS</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg" alt="Notion" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">Notion</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Jira" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">Jira</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">React</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg" alt="Cloudflare" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">Cloudflare</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg" alt="Confluence" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">Confluence</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" alt="GitHub Actions" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">GitHub Actions</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitbook/gitbook-original.svg" alt="GitBook" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">GitBook</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gimp/gimp-original.svg" alt="GIMP" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">GIMP</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" alt="Nginx" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">Nginx</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg" alt="Windows 11" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+                  <span class="text-sm font-medium text-gray-300">Windows 11</span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
   </header>
-  
-  
 
-  <main>
-
-    <section>
-      <h2>👨‍💻 Sobre mí</h2>
-      <p>Trabajo en <strong>Daia Systems</strong> como Analista de Sistemas. Me especializo en documentación, automatización de procesos, desarrollo de herramientas internas y soporte técnico.</p>
-      <p>Soy el creador de <code>help.daia.cl</code>, y también mantengo proyectos personales como conversores de formatos y páginas para despliegue rápido en GitHub Pages.</p>
-    </section>
-
-    <section>
-      <h2>📌 Proyectos Destacados</h2>
-      <ul>
-        <li><a href="https://github.com/fgbravom/bookmark-converter" target="_blank">🔗 Bookmark Converter (HTML a CSV)</a></li>
-        <li><a href="https://help.daia.cl" target="_blank">📚 Documentación Daia Systems</a></li>
-        <li><a href="https://daia.cl" target="_blank">🌐 Sitio Corporativo de Daia</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>🛠️ Tecnologías y Plataformas</h2>
-      <p>Estas son algunas de las herramientas y tecnologías con las que trabajo frecuentemente:</p>
-      <div class="tech-icons">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" title="GitHub"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" title="VS Code"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="Markdown" title="Markdown"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" title="AWS" />         
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg" alt="Notion" title="Notion"  />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Jira" title="Jira"   />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" title="React"   /> 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg" alt="Cloudflare" title="Cloudflare"/> 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg" alt="Confluence" title="Confluence" /> 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" alt="githubactions" title="githubactions"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitbook/gitbook-original.svg" alt="gitbook" title="gitbook"   />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gimp/gimp-original.svg" alt="gimp" title="gimp"   /> 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" alt="nginx" title="nginx"   />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg" alt="windows11" title="windows11"/> 
-      </div>
-    </section>
-
-    <section id="contacto">
-
-      <h2>📫 Contacto</h2>
-      
-      <form id="contactForm">
-        <br><label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required />
-  
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" required />
-  
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" />
-  
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-  
-        <button type="submit">Enviar</button>
-        <p id="estadoEnvio"></p>
-      </form>
-
-      <div id="popup" class="popup">
-        <div class="popup-content">
-          <p>✅ ¡Mensaje enviado correctamente!</p>
-          <button id="closePopup">Cerrar</button>
-        </div>
-      </div>
-
-    </section>
-    
-    <section>
-      <h2>🌫️ Calidad del Aire en Curicó</h2>
-      <div style="position: relative; width: 100%; height: 600px; border-radius: 8px; overflow: hidden; margin-bottom: 2rem;">
-        <iframe 
-          src="https://sinca.mma.gob.cl/mapainteractivo/index.html?q=1676041755&amp;z=8"
-          frameborder="0"
-          sandbox="allow-scripts allow-popups allow-top-navigation-by-user-activation allow-forms allow-same-origin allow-storage-access-by-user-activation allow-popups-to-escape-sandbox"
-          allowfullscreen
-          style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: none; background-color: #191919;">
-        </iframe>
-      </div>
-    </section>
-    
-    
-  </main>
-
-  <footer>
-     Desarrollado por fgbravom.
+  <footer class="bg-black text-white py-12 mt-0">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-gray-400">Desarrollado por <span class="text-white font-medium">fgbravom</span></p>
+    </div>
   </footer>
 
   <script>
@@ -152,8 +382,9 @@
         const data = await res.json();
 
         if (res.ok) {
-          form.reset(); // Restablece el formulario
-          popup.style.display = "flex"; // Muestra el popup
+          form.reset();
+          popup.classList.remove('hidden');
+          popup.classList.add('flex');
         } else {
           alert(`❌ Error: ${data.error?.message || "No se pudo enviar"}`);
         }
@@ -163,14 +394,85 @@
     });
 
     closePopup.addEventListener("click", () => {
-      popup.style.display = "none"; // Oculta el popup al hacer clic en "Cerrar"
+      popup.classList.add('hidden');
+      popup.classList.remove('flex');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerHeight = document.querySelector('nav').offsetHeight;
+          const targetPosition = target.offsetTop - headerHeight - 20;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Scroll indicator functionality
+    const scrollIndicator = document.getElementById('scroll-indicator');
+    
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const maxScroll = 200; // Rango más amplio para transición más suave
+      
+      if (scrollY > maxScroll) {
+        scrollIndicator.style.opacity = '0';
+        scrollIndicator.style.transform = 'translateY(-30px)';
+      } else if (scrollY > 50) {
+        // Transición gradual entre 50px y 200px
+        const progress = (scrollY - 50) / (maxScroll - 50);
+        scrollIndicator.style.opacity = 1 - progress;
+        scrollIndicator.style.transform = `translateY(-${progress * 30}px)`;
+      } else {
+        scrollIndicator.style.opacity = '1';
+        scrollIndicator.style.transform = 'translateY(0)';
+      }
+    });
+
+    // Enhanced Parallax effect
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const parallaxLayers = document.querySelectorAll('.parallax-layer');
+      
+      parallaxLayers.forEach(layer => {
+        const speed = layer.getAttribute('data-speed');
+        const yPos = -(scrolled * speed);
+        layer.style.transform = `translateY(${yPos}px)`;
+      });
+    });
+
+    // Logo link functionality
+    const logoLink = document.getElementById('logo-link');
+    logoLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   });
 </script>
-
-  
-
-  
-  
 </body>
 </html>
