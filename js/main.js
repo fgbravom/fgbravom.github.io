@@ -163,13 +163,17 @@ function setupLogoLink() {
   const logoLink = document.getElementById('logo-link');
   
   if (logoLink) {
-    logoLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+    // Solo aplicar scroll suave si estamos en la página principal
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+      logoLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       });
-    });
+    }
+    // En otras páginas, el enlace navegará normalmente al sitio principal
   }
 }
 
