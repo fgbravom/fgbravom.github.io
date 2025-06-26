@@ -271,7 +271,7 @@
     }
   </style>
 </head>
-<body class="bg-white font-inter text-black">
+<body class="bg-black font-inter text-white">
   
   <!-- Navigation -->
   <nav class="sticky top-0 z-50 bg-black border-b border-gray-800">
@@ -333,6 +333,9 @@
               <a href="mailto:tu-correo@ejemplo.com" class="text-gray-300 hover:text-white transition-colors social-link">
                 <i class="fas fa-envelope text-2xl"></i>
               </a>
+              <a href="#contacto" class="text-gray-300 hover:text-white transition-colors social-link" title="Ir a contacto">
+                <i class="fas fa-paper-plane text-2xl"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -344,213 +347,163 @@
           <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-      
-      <!-- Grid de tarjetas -->
-      <div class="w-full max-w-6xl mt-12 px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div class="flex flex-col gap-10">
-            <!-- Sobre mí -->
-            <section id="sobre-mi" class="bg-transparent rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow animate-fade-in">
-              <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-300 animate-slide-up">
-                <span class="text-2xl mr-3">👨‍💻</span>
-                <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Sobre mí</span>
-              </h2>
-              <div class="prose max-w-none">
-                <p class="text-lg text-gray-400 leading-relaxed mb-4 animate-fade-in" style="animation-delay:0.1s;">
-                  Hola, soy Felipe y trabajo como Analista de Sistemas en <strong class="text-gray-300">Daia Systems</strong>. Me dedico principalmente a documentar procesos, automatizar tareas, crear herramientas internas que faciliten el trabajo del equipo y brindar soporte técnico cuando se requiera de una mano.
-                </p>
-                <p class="text-lg text-gray-400 leading-relaxed mb-4 animate-fade-in" style="animation-delay:0.2s;">
-                  Una de las cosas que más me gusta es encontrar formas de simplificar lo complejo. Por ejemplo, desarrollé <code class="bg-gray-800 px-2 py-1 rounded text-sm font-mono border border-gray-600 text-gray-300">help.daia.cl</code>, la plataforma de documentación de la empresa, y también he construido varias herramientas que ayudan a que los flujos de trabajo sean más rápidos y eficientes.
-                </p>
-                <p class="text-lg text-gray-400 leading-relaxed animate-fade-in" style="animation-delay:0.3s;">
-                  Soy chileno, curioso por naturaleza, y siempre estoy buscando cómo mejorar las cosas desde lo técnico, pero también desde lo humano.
-                </p>
-              </div>
-            </section>
-            
-            <!-- Contacto -->
-            <!-- Contacto -->
-            <section id="contacto" class="bg-transparent rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow animate-fade-in">
-              <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-300 animate-slide-up">
-                <span class="text-2xl mr-3">📫</span>
-                <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Contacto</span>
-              </h2>
-              <form id="contactForm" class="max-w-2xl mx-auto space-y-6">
-                <div>
-                  <label for="nombre" class="block text-sm font-medium text-gray-300 mb-2">Nombre</label>
-                  <input type="text" id="nombre" name="nombre" required 
-                         class="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-colors bg-gray-800 text-gray-300 placeholder-gray-500" />
-                </div>
-                <div>
-                  <label for="correo" class="block text-sm font-medium text-gray-300 mb-2">Correo electrónico</label>
-                  <input type="email" id="correo" name="correo" required 
-                         class="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-colors bg-gray-800 text-gray-300 placeholder-gray-500" />
-                </div>
-                <div>
-                  <label for="telefono" class="block text-sm font-medium text-gray-300 mb-2">Teléfono</label>
-                  <input type="tel" id="telefono" name="telefono" 
-                         class="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-colors bg-gray-800 text-gray-300 placeholder-gray-500" />
-                </div>
-                <div>
-                  <label for="mensaje" class="block text-sm font-medium text-gray-300 mb-2">Mensaje</label>
-                  <textarea id="mensaje" name="mensaje" rows="5" required 
-                            class="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-colors bg-gray-800 text-gray-300 placeholder-gray-500 resize-none"></textarea>
-                </div>
-                <button type="submit" 
-                        class="w-full bg-gray-700 text-gray-300 py-3 px-6 rounded-lg font-medium hover:bg-gray-600 transition-colors focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                  Enviar mensaje
-                </button>
-                <p id="estadoEnvio" class="text-center"></p>
-              </form>
-              <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-                <div class="bg-gray-800 rounded-2xl p-8 max-w-md mx-4 text-center">
-                  <div class="text-6xl mb-4">✅</div>
-                  <p class="text-lg font-medium text-gray-300 mb-6">¡Mensaje enviado correctamente!</p>
-                  <button id="closePopup" 
-                          class="bg-gray-700 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-600 transition-colors">
-                    Cerrar
-                  </button>
-                </div>
-              </div>
-            </section>
-          </div>
-          
-          <div class="flex flex-col gap-10">
-            <!-- Proyectos Destacados -->
-            <section id="proyectos" class="bg-transparent rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow animate-fade-in">
-              <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-300 animate-slide-up">
-                <span class="text-2xl mr-3">📌</span>
-                <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Proyectos Destacados</span>
-              </h2>
-              <div class="grid gap-4">
-                <a href="https://github.com/fgbravom/bookmark-converter" target="_blank" 
-                   class="group block p-6 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 border border-gray-600 hover:border-gray-500 hover:shadow-md animate-fade-in">
-                  <div class="flex items-center space-x-4">
-                    <div class="text-3xl">🔗</div>
-                    <div>
-                      <h3 class="text-lg font-semibold text-gray-300 group-hover:text-gray-200 transition-colors bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent project-title">Bookmark Converter</h3>
-                      <p class="text-gray-400 animate-fade-in">Conversor de HTML a CSV para marcadores</p>
-                    </div>
-                  </div>
-                </a>
-                <a href="https://help.daia.cl" target="_blank" 
-                   class="group block p-6 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 border border-gray-600 hover:border-gray-500 hover:shadow-md animate-fade-in">
-                  <div class="flex items-center space-x-4">
-                    <div class="text-3xl">📚</div>
-                    <div>
-                      <h3 class="text-lg font-semibold text-gray-300 group-hover:text-gray-200 transition-colors bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent project-title">Documentación Daia Systems</h3>
-                      <p class="text-gray-400 animate-fade-in">Portal de documentación corporativa</p>
-                    </div>
-                  </div>
-                </a>
-                <a href="https://daia.cl" target="_blank" 
-                   class="group block p-6 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 border border-gray-600 hover:border-gray-500 hover:shadow-md animate-fade-in">
-                  <div class="flex items-center space-x-4">
-                    <div class="text-3xl">🌐</div>
-                    <div>
-                      <h3 class="text-lg font-semibold text-gray-300 group-hover:text-gray-200 transition-colors bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent project-title">Sitio Corporativo de Daia</h3>
-                      <p class="text-gray-400 animate-fade-in">Página web oficial de la empresa</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </section>
-            
-            <!-- Tecnologías -->
-            <section id="tecnologias" class="bg-transparent rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow animate-fade-in">
-              <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-300 animate-slide-up">
-                <span class="text-2xl mr-3">🛠️</span>
-                <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Tecnologías y Plataformas</span>
-              </h2>
-              <p class="text-lg text-gray-400 mb-8 animate-fade-in">Estas son algunas de las herramientas y tecnologías con las que trabajo frecuentemente:</p>
-              <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">HTML5</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">CSS3</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">JavaScript</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">Python</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">Git</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">GitHub</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">VS Code</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">MySQL</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="Markdown" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">Markdown</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">AWS</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg" alt="Notion" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">Notion</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Jira" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">Jira</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">React</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg" alt="Cloudflare" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">Cloudflare</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg" alt="Confluence" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">Confluence</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" alt="GitHub Actions" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">GitHub Actions</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitbook/gitbook-original.svg" alt="GitBook" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">GitBook</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gimp/gimp-original.svg" alt="GIMP" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">GIMP</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" alt="Nginx" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">Nginx</span>
-                </div>
-                <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg" alt="Windows 11" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
-                  <span class="text-sm font-medium text-gray-300 tech-name">Windows 11</span>
-                </div>
-              </div>
-            </section>
-          </div>
+    </div>
+
+    <!-- Galería de Proyectos -->
+  <section id="proyectos" class="w-full max-w-4xl mx-auto mt-12 px-4">
+    <h2 class="text-3xl font-bold mb-8 flex items-center text-gray-300 animate-slide-up">
+      <span class="text-2xl mr-3">📌</span>
+      <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Proyectos Destacados</span>
+    </h2>
+    <div id="proyectos-galeria-principal" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"></div>
+    <div class="text-center mt-8">
+      <a href="/proyectos.html" class="inline-block bg-gray-700 text-gray-200 px-6 py-2 rounded-lg font-medium hover:bg-gray-600 transition-colors">Ver todos los proyectos</a>
+    </div>
+  </section>
+
+  <!-- Tecnologías y Plataformas -->
+  <section id="tecnologias" class="w-full max-w-4xl mx-auto mt-16 px-4">
+    <div class="bg-transparent rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow animate-fade-in">
+      <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-300 animate-slide-up">
+        <span class="text-2xl mr-3">🛠️</span>
+        <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Tecnologías y Plataformas</span>
+      </h2>
+      <p class="text-lg text-gray-400 mb-8 animate-fade-in">Estas son algunas de las herramientas y tecnologías con las que trabajo frecuentemente:</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">HTML5</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">CSS3</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">JavaScript</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">Python</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">Git</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">GitHub</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">VS Code</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">MySQL</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="Markdown" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">Markdown</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">AWS</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg" alt="Notion" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">Notion</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Jira" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">Jira</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">React</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg" alt="Cloudflare" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">Cloudflare</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg" alt="Confluence" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">Confluence</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" alt="GitHub Actions" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">GitHub Actions</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitbook/gitbook-original.svg" alt="GitBook" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">GitBook</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gimp/gimp-original.svg" alt="GIMP" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">GIMP</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" alt="Nginx" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">Nginx</span>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500 hover:shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg" alt="Windows 11" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform" />
+          <span class="text-sm font-medium text-gray-300 tech-name">Windows 11</span>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Formulario de Contacto -->
+  <section id="contacto" class="w-full max-w-2xl mx-auto mt-16 px-4">
+    <div class="bg-transparent rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow animate-fade-in">
+      <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-300 animate-slide-up">
+        <span class="text-2xl mr-3">📫</span>
+        <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">Contacto</span>
+      </h2>
+      <form id="contactForm" class="max-w-2xl mx-auto space-y-6">
+        <div>
+          <label for="nombre" class="block text-sm font-medium text-gray-300 mb-2">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required 
+                 class="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-colors bg-gray-800 text-gray-300 placeholder-gray-500" />
+        </div>
+        <div>
+          <label for="correo" class="block text-sm font-medium text-gray-300 mb-2">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required 
+                 class="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-colors bg-gray-800 text-gray-300 placeholder-gray-500" />
+        </div>
+        <div>
+          <label for="telefono" class="block text-sm font-medium text-gray-300 mb-2">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" 
+                 class="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-colors bg-gray-800 text-gray-300 placeholder-gray-500" />
+        </div>
+        <div>
+          <label for="mensaje" class="block text-sm font-medium text-gray-300 mb-2">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required 
+                    class="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-colors bg-gray-800 text-gray-300 placeholder-gray-500 resize-none"></textarea>
+        </div>
+        <button type="submit" 
+                class="w-full bg-gray-700 text-gray-300 py-3 px-6 rounded-lg font-medium hover:bg-gray-600 transition-colors focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+          Enviar mensaje
+        </button>
+        <p id="estadoEnvio" class="text-center"></p>
+      </form>
+      <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-gray-800 rounded-2xl p-8 max-w-md mx-4 text-center">
+          <div class="text-6xl mb-4">✅</div>
+          <p class="text-lg font-medium text-gray-300 mb-6">¡Mensaje enviado correctamente!</p>
+          <button id="closePopup" 
+                  class="bg-gray-700 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-600 transition-colors">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   </header>
+
+  
 
   <footer class="bg-black text-white py-12 mt-0">
     <div class="max-w-4xl mx-auto px-6 text-center">
@@ -561,5 +514,36 @@
   <!-- JavaScript -->
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    // Renderizar hasta 10 proyectos destacados en la galería principal
+    if (typeof PROJECTS_DATA !== 'undefined') {
+      const contenedor = document.getElementById('proyectos-galeria-principal');
+      if (contenedor) {
+        contenedor.innerHTML = '';
+        PROJECTS_DATA.slice(0, 10).forEach(proyecto => {
+          contenedor.innerHTML += `
+            <div class=\"bg-gray-800 rounded-2xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all flex flex-col overflow-hidden\">
+              <img src=\"${proyecto.imagen}\" alt=\"${proyecto.titulo}\" class=\"w-full h-40 object-cover\">
+              <div class=\"p-4 flex-1 flex flex-col\">
+                <div class=\"flex items-center justify-between mb-2\">
+                  <span class=\"text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded\">${proyecto.anio}</span>
+                  <span class=\"text-xs px-2 py-1 rounded ${proyecto.estado === 'Trabajo actual' ? 'bg-green-700 text-green-200' : proyecto.estado === 'En desarrollo' ? 'bg-yellow-700 text-yellow-200' : 'bg-purple-700 text-purple-200'}\">${proyecto.estado}</span>
+                </div>
+                <h3 class=\"text-base font-bold text-white mb-1\">${proyecto.titulo}</h3>
+                <div class=\"flex flex-wrap gap-2 mb-2\">
+                  ${proyecto.etiquetas.map(et => `<span class=\"text-xs bg-gray-600 text-gray-200 px-2 py-1 rounded\">${et}</span>`).join(' ')}
+                </div>
+                <p class=\"text-gray-400 text-xs mb-2 flex-1\">${proyecto.descripcion}</p>
+                <div class=\"flex items-end justify-between mt-auto\">
+                  <span class=\"text-xs text-gray-500\">${proyecto.fecha}</span>
+                  ${proyecto.enlace ? `<a href=\"${proyecto.enlace}\" target=\"_blank\" class=\"text-blue-400 hover:underline text-xs font-medium\">Ver más</a>` : ''}
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      }
+    }
+  </script>
 </body>
 </html> 
