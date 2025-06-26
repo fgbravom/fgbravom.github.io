@@ -1,28 +1,136 @@
 // ===== DATOS DE PROYECTOS =====
 const PROJECTS_DATA = [
   {
-    id: 'bookmark-converter',
-    title: 'Bookmark Converter',
-    description: 'Conversor de HTML a CSV para marcadores',
-    icon: '🔗',
-    url: 'https://github.com/fgbravom/bookmark-converter',
-    technologies: ['JavaScript', 'HTML', 'CSS']
+    id: 1,
+    titulo: 'Espacio de trabajo Daia Systems',
+    anio: 2024,
+    enlace: 'https://daia.cl',
+    etiquetas: ['Trabajo actual', 'Base de conocimientos'],
+    estado: 'Trabajo actual',
+    fecha: '11 de febrero de 2023 17:21',
+    descripcion: 'Gestión y documentación interna de Daia Systems.',
+    imagen: 'https://placehold.co/600x400?text=Daia+Systems'
   },
   {
-    id: 'daia-docs',
-    title: 'Documentación Daia Systems',
-    description: 'Portal de documentación corporativa',
-    icon: '📚',
-    url: 'https://help.daia.cl',
-    technologies: ['GitBook', 'Markdown', 'Documentación']
+    id: 2,
+    titulo: 'help.daia.cl',
+    anio: 2023,
+    enlace: 'https://help.daia.cl',
+    etiquetas: ['Base de conocimientos', 'NoCode'],
+    estado: 'Trabajo actual',
+    fecha: '10 de enero de 2023 1:09',
+    descripcion: 'Portal de documentación corporativa.',
+    imagen: 'https://placehold.co/600x400?text=help.daia.cl'
   },
   {
-    id: 'daia-website',
-    title: 'Sitio Corporativo de Daia',
-    description: 'Página web oficial de la empresa',
-    icon: '🌐',
-    url: 'https://daia.cl',
-    technologies: ['React', 'CSS', 'JavaScript']
+    id: 3,
+    titulo: 'daia.cl',
+    anio: 2022,
+    enlace: 'https://daia.cl',
+    etiquetas: ['Landing page', 'HTML', 'Parallax'],
+    estado: 'Trabajo actual',
+    fecha: '28 de septiembre de 2022 0:47',
+    descripcion: 'Landing page para la empresa Daia.',
+    imagen: 'https://placehold.co/600x400?text=daia.cl'
+  },
+  {
+    id: 4,
+    titulo: 'help.tuu.cl',
+    anio: 2021,
+    enlace: 'https://help.tuu.cl',
+    etiquetas: ['Base de conocimientos', 'Trabajos anteriores'],
+    estado: 'Trabajos anteriores',
+    fecha: '8 de mayo de 2022 4:18',
+    descripcion: 'Sistema web para documentación abierta al público.',
+    imagen: 'https://placehold.co/600x400?text=help.tuu.cl'
+  },
+  {
+    id: 5,
+    titulo: 'Centro de ayuda Haulmer',
+    anio: 2020,
+    enlace: 'https://haulmer.notion.site',
+    etiquetas: ['Base de conocimientos', 'NoCode'],
+    estado: 'Trabajo actual',
+    fecha: '5 de agosto de 2022 14:29',
+    descripcion: 'Centro de ayuda y certificación digital.',
+    imagen: 'https://placehold.co/600x400?text=Haulmer+Ayuda'
+  },
+  {
+    id: 6,
+    titulo: 'Documentación Haulmer',
+    anio: 2020,
+    enlace: '',
+    etiquetas: ['Base de conocimientos', 'NoCode', 'Trabajos anteriores'],
+    estado: 'Trabajos anteriores',
+    fecha: '8 de mayo de 2022 4:18',
+    descripcion: 'Documentación técnica y de procesos para Haulmer.',
+    imagen: 'https://placehold.co/600x400?text=Haulmer+Docs'
+  },
+  {
+    id: 7,
+    titulo: 'Bookmark Converter',
+    anio: 2023,
+    enlace: 'https://github.com/fgbravom/bookmark-converter',
+    etiquetas: ['Open Source', 'Herramienta'],
+    estado: 'Trabajo actual',
+    fecha: '15 de marzo de 2023 10:00',
+    descripcion: 'Conversor de HTML a CSV para marcadores.',
+    imagen: 'https://placehold.co/600x400?text=Bookmark+Converter'
+  },
+  {
+    id: 8,
+    titulo: 'help.daia.cl v2',
+    anio: 2024,
+    enlace: '',
+    etiquetas: ['En desarrollo', 'NoCode'],
+    estado: 'En desarrollo',
+    fecha: '1 de junio de 2024 12:00',
+    descripcion: 'Nueva versión de la plataforma de documentación.',
+    imagen: 'https://placehold.co/600x400?text=help.daia.cl+v2'
+  },
+  {
+    id: 9,
+    titulo: 'API de automatización',
+    anio: 2023,
+    enlace: '',
+    etiquetas: ['API', 'Automatización'],
+    estado: 'Trabajo actual',
+    fecha: '20 de diciembre de 2023 9:30',
+    descripcion: 'API para automatización de procesos internos.',
+    imagen: 'https://placehold.co/600x400?text=API+Automatizacion'
+  },
+  {
+    id: 10,
+    titulo: 'Gestor de tareas',
+    anio: 2022,
+    enlace: '',
+    etiquetas: ['Herramienta', 'Productividad'],
+    estado: 'Trabajo actual',
+    fecha: '10 de noviembre de 2022 16:00',
+    descripcion: 'Aplicación para gestión de tareas y proyectos.',
+    imagen: 'https://placehold.co/600x400?text=Gestor+Tareas'
+  },
+  {
+    id: 11,
+    titulo: 'Sitio personal',
+    anio: 2024,
+    enlace: 'https://fgbravom.github.io',
+    etiquetas: ['Portfolio', 'Personal'],
+    estado: 'Trabajo actual',
+    fecha: '1 de junio de 2024 12:00',
+    descripcion: 'Sitio web personal y portafolio.',
+    imagen: 'https://placehold.co/600x400?text=Sitio+Personal'
+  },
+  {
+    id: 12,
+    titulo: 'Documentador automático',
+    anio: 2023,
+    enlace: '',
+    etiquetas: ['Automatización', 'Documentación'],
+    estado: 'En desarrollo',
+    fecha: '15 de abril de 2023 11:00',
+    descripcion: 'Herramienta para generar documentación automáticamente.',
+    imagen: 'https://placehold.co/600x400?text=Documentador+Automatico'
   }
 ];
 
