@@ -485,4 +485,9 @@ h1, h2, h3 {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+/* Subrayado permanente para el enlace activo en la navegación */
+.nav-link.active::after {
+  width: 100%;
 } 
