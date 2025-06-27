@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <!-- Optimizaciones de rendimiento -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
+  <title>Tecnologías - Felipe Bravo Miranda</title>
+  <meta name="description" content="Tecnologías y herramientas que utiliza Felipe Bravo Miranda, Analista de Sistemas.">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-black font-inter text-white min-h-screen flex flex-col">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-black border-b border-gray-800">
+    <div class="max-w-4xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="/index.html" class="text-xl font-semibold text-white hover:text-gray-300 transition-colors logo-link nav-link" id="logo-link">fgbravom</a>
+        <div class="hidden md:flex space-x-6">
+          <a href="/sobremi.html" class="text-gray-300 hover:text-white transition-colors nav-link">Sobre mí</a>
+          <a href="/proyectos.html" class="text-gray-300 hover:text-white transition-colors nav-link">Proyectos</a>
+          <a href="/tecnologias.html" class="text-gray-300 hover:text-white transition-colors nav-link active font-bold">Tecnologías</a>
+          <a href="/index.html#contacto" class="text-gray-300 hover:text-white transition-colors nav-link">Contacto</a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden absolute left-0 right-0 top-full bg-black border-b border-gray-800 shadow-lg pb-4 z-50">
+        <div class="flex flex-col space-y-3 px-6 pt-4">
+          <a href="/sobremi.html" class="text-gray-300 hover:text-white transition-colors py-2 nav-link">Sobre mí</a>
+          <a href="/proyectos.html" class="text-gray-300 hover:text-white transition-colors py-2 nav-link">Proyectos</a>
+          <a href="/tecnologias.html" class="text-gray-300 hover:text-white transition-colors py-2 nav-link active font-bold">Tecnologías</a>
+          <a href="/index.html#contacto" class="text-gray-300 hover:text-white transition-colors py-2 nav-link">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-1 py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+          <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">
+            Tecnologías y Herramientas
+          </span>
+        </h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          Un recorrido completo por las tecnologías, herramientas y plataformas que utilizo en mi trabajo diario como Analista de Sistemas.
+        </p>
+      </div>
+
+      <!-- Categorías de Tecnologías -->
+      <div class="space-y-12">
+        <!-- Frontend -->
+        <section class="bg-gray-800/30 rounded-2xl p-8 border border-gray-700">
+          <h2 class="text-2xl font-bold mb-6 flex items-center text-gray-300">
+            <span class="text-xl mr-3">🎨</span>
+            <span class="bg-gradient-to-br from-blue-300 to-blue-500 bg-clip-text text-transparent">Frontend</span>
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">HTML5</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">CSS3</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">JavaScript</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">React</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Backend -->
+        <section class="bg-gray-800/30 rounded-2xl p-8 border border-gray-700">
+          <h2 class="text-2xl font-bold mb-6 flex items-center text-gray-300">
+            <span class="text-xl mr-3">⚙️</span>
+            <span class="bg-gradient-to-br from-green-300 to-green-500 bg-clip-text text-transparent">Backend</span>
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">Python</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">MySQL</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" alt="Nginx" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">Nginx</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Herramientas de Desarrollo -->
+        <section class="bg-gray-800/30 rounded-2xl p-8 border border-gray-700">
+          <h2 class="text-2xl font-bold mb-6 flex items-center text-gray-300">
+            <span class="text-xl mr-3">🛠️</span>
+            <span class="bg-gradient-to-br from-purple-300 to-purple-500 bg-clip-text text-transparent">Herramientas de Desarrollo</span>
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">Git</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">GitHub</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">VS Code</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="Markdown" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">Markdown</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" alt="GitHub Actions" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">GitHub Actions</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Cloud y Hosting -->
+        <section class="bg-gray-800/30 rounded-2xl p-8 border border-gray-700">
+          <h2 class="text-2xl font-bold mb-6 flex items-center text-gray-300">
+            <span class="text-xl mr-3">☁️</span>
+            <span class="bg-gradient-to-br from-yellow-300 to-yellow-500 bg-clip-text text-transparent">Cloud y Hosting</span>
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">AWS</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg" alt="Cloudflare" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">Cloudflare</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gestión de Proyectos -->
+        <section class="bg-gray-800/30 rounded-2xl p-8 border border-gray-700">
+          <h2 class="text-2xl font-bold mb-6 flex items-center text-gray-300">
+            <span class="text-xl mr-3">📋</span>
+            <span class="bg-gradient-to-br from-red-300 to-red-500 bg-clip-text text-transparent">Gestión de Proyectos</span>
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg" alt="Notion" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">Notion</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Jira" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">Jira</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg" alt="Confluence" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">Confluence</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitbook/gitbook-original.svg" alt="GitBook" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">GitBook</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Herramientas Adicionales -->
+        <section class="bg-gray-800/30 rounded-2xl p-8 border border-gray-700">
+          <h2 class="text-2xl font-bold mb-6 flex items-center text-gray-300">
+            <span class="text-xl mr-3">🎯</span>
+            <span class="bg-gradient-to-br from-indigo-300 to-indigo-500 bg-clip-text text-transparent">Herramientas Adicionales</span>
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gimp/gimp-original.svg" alt="GIMP" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">GIMP</span>
+            </div>
+            <div class="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-600/50 transition-all duration-300 group border border-gray-600 hover:border-gray-500">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg" alt="Windows 11" class="w-12 h-12 mb-3 group-hover:scale-110 transition-transform" />
+              <span class="text-sm font-medium text-gray-300">Windows 11</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Estadísticas -->
+      <section class="mt-16 bg-gray-800/30 rounded-2xl p-8 border border-gray-700">
+        <h2 class="text-2xl font-bold mb-8 text-center text-gray-300">
+          <span class="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent">
+            Resumen de Tecnologías
+          </span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+          <div class="bg-gray-700/50 rounded-xl p-6 border border-gray-600">
+            <div class="text-3xl font-bold text-blue-400 mb-2">4</div>
+            <div class="text-gray-300">Frontend</div>
+          </div>
+          <div class="bg-gray-700/50 rounded-xl p-6 border border-gray-600">
+            <div class="text-3xl font-bold text-green-400 mb-2">3</div>
+            <div class="text-gray-300">Backend</div>
+          </div>
+          <div class="bg-gray-700/50 rounded-xl p-6 border border-gray-600">
+            <div class="text-3xl font-bold text-purple-400 mb-2">5</div>
+            <div class="text-gray-300">Herramientas</div>
+          </div>
+          <div class="bg-gray-700/50 rounded-xl p-6 border border-gray-600">
+            <div class="text-3xl font-bold text-yellow-400 mb-2">6</div>
+            <div class="text-gray-300">Plataformas</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bg-black text-white py-12 mt-0">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-gray-400">Desarrollado por <span class="text-white font-medium">fgbravom</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html> 
