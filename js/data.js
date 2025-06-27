@@ -9,7 +9,7 @@ const PROJECTS_DATA = [
     estado: 'Trabajo actual',
     fecha: '11 de febrero de 2023 17:21',
     descripcion: 'Gestión y documentación interna de Daia Systems.',
-    imagen: 'https://drive.google.com/file/d/1p3m8vIO7SOtXLuN73EUrIjhxHB6Uv2ec/view?usp=drive_link'
+    imagen: 'https://drive.google.com/uc?export=view&id=1p3m8vIO7SOtXLuN73EUrIjhxHB6Uv2ec'
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const PROJECTS_DATA = [
     estado: 'Trabajo actual',
     fecha: '10 de enero de 2023 1:09',
     descripcion: 'Portal de documentación corporativa.',
-    imagen: 'https://drive.google.com/file/d/1de9dxddxS3ypkriB6Yq_B_TT7PC1vjTD/view?usp=drive_link'
+    imagen: 'https://drive.google.com/uc?export=view&id=1de9dxddxS3ypkriB6Yq_B_TT7PC1vjTD'
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const PROJECTS_DATA = [
     estado: 'Trabajo actual',
     fecha: '28 de septiembre de 2022 0:47',
     descripcion: 'Landing page para la empresa Daia.',
-    imagen: 'https://drive.google.com/file/d/1dO-hy3fKXeX7WoCcdy71GAV25TIfgtQm/view?usp=drive_link'
+    imagen: 'https://drive.google.com/uc?export=view&id=1dO-hy3fKXeX7WoCcdy71GAV25TIfgtQm'
   },
   {
     id: 4,
