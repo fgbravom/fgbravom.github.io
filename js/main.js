@@ -5,11 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initializeApp() {
   setupContactForm();
-  setupNavigation();
-  setupMobileMenu();
   setupScrollIndicator();
   setupParallaxEffect();
-  setupLogoLink();
 }
 
 // ===== FORMULARIO DE CONTACTO =====
@@ -78,48 +75,6 @@ function showError(message) {
   alert(`❌ ${message}`);
 }
 
-// ===== NAVEGACIÓN SUAVE =====
-function setupNavigation() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', handleSmoothScroll);
-  });
-}
-
-function handleSmoothScroll(e) {
-  e.preventDefault();
-  const targetId = this.getAttribute('href');
-  const target = document.querySelector(targetId);
-  
-  if (target) {
-    const headerHeight = document.querySelector('nav')?.offsetHeight || 0;
-    const targetPosition = target.offsetTop - headerHeight - 20;
-    
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
-    });
-  }
-}
-
-// ===== MENÚ MÓVIL =====
-function setupMobileMenu() {
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  if (!mobileMenuButton || !mobileMenu) return;
-
-  mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-  // Cerrar menú al hacer clic en un enlace
-  document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-    });
-  });
-}
-
 // ===== INDICADOR DE SCROLL OPTIMIZADO =====
 function setupScrollIndicator() {
   const scrollIndicator = document.getElementById('scroll-indicator');
@@ -180,26 +135,7 @@ function setupParallaxEffect() {
   window.addEventListener('scroll', throttledParallaxHandler, { passive: true });
 }
 
-// ===== ENLACE DEL LOGO =====
-function setupLogoLink() {
-  const logoLink = document.getElementById('logo-link');
-  
-  if (logoLink) {
-    // Solo aplicar scroll suave si estamos en la página principal
-    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-      logoLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-    }
-    // En otras páginas, el enlace navegará normalmente al sitio principal
-  }
-}
-
-// ===== UTILIDADES OPTIMIZADAS =====
+// ===== UTILIDADES DE RENDIMIENTO =====
 function throttle(func, limit) {
   let inThrottle;
   return function() {
@@ -225,7 +161,7 @@ function debounce(func, wait) {
   };
 }
 
-// ===== ANIMACIONES DE ENTRADA OPTIMIZADAS =====
+// ===== ANIMACIONES AL SCROLL =====
 function animateOnScroll() {
   const observerOptions = {
     threshold: 0.1,
@@ -242,10 +178,15 @@ function animateOnScroll() {
   }, observerOptions);
 
   // Observar elementos que necesitan animación
-  document.querySelectorAll('.content-section, .project-card, .tech-item').forEach(el => {
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
     observer.observe(el);
   });
 }
+
+// ===== INICIALIZACIÓN DE ANIMACIONES =====
+document.addEventListener("DOMContentLoaded", function() {
+  animateOnScroll();
+});
 
 // ===== CONFIGURACIÓN DE TAILWIND =====
 if (typeof tailwind !== 'undefined') {
@@ -272,9 +213,4 @@ if (typeof tailwind !== 'undefined') {
       }
     }
   };
-}
-
-// ===== INICIALIZAR ANIMACIONES =====
-document.addEventListener("DOMContentLoaded", function () {
-  animateOnScroll();
-}); 
+} 

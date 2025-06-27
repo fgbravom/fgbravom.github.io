@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #000000;
+  color: #ffffff;
   line-height: 1.6;
   /* Optimización para scroll suave */
   scroll-behavior: smooth;
@@ -211,12 +211,12 @@ body {
   background: rgba(55, 65, 81, 0.5);
   border-color: #6b7280;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transform: scale(1.05);
+  transform: translateY(-2px);
 }
 
 .tech-icon {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-bottom: 0.5rem;
   transition: transform 0.3s ease;
 }
@@ -226,7 +226,7 @@ body {
 }
 
 .tech-name {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: #d1d5db;
   text-align: center;
@@ -256,28 +256,27 @@ body {
   padding: 0.75rem 1rem;
   border: 1px solid #4b5563;
   border-radius: 0.5rem;
-  background: #1f2937;
+  background-color: #1f2937;
   color: #d1d5db;
-  font-size: 1rem;
   transition: all 0.3s ease;
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #9ca3af;
-  box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.1);
+  border-color: #6b7280;
+  box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.1);
 }
 
 .form-textarea {
-  resize: none;
-  min-height: 120px;
+  resize: vertical;
+  min-height: 6rem;
 }
 
 .submit-button {
   width: 100%;
   padding: 0.75rem 1.5rem;
-  background: #374151;
+  background-color: #374151;
   color: #d1d5db;
   border: none;
   border-radius: 0.5rem;
@@ -287,36 +286,40 @@ body {
 }
 
 .submit-button:hover {
-  background: #4b5563;
+  background-color: #4b5563;
 }
 
 .submit-button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.1);
+  box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.1);
 }
 
 /* ===== POPUP DE CONFIRMACIÓN ===== */
 .popup-overlay {
   position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 50;
+  z-index: 1000;
 }
 
 .popup-content {
   background: #1f2937;
   border-radius: 1rem;
   padding: 2rem;
-  max-width: 28rem;
+  max-width: 24rem;
   margin: 0 1rem;
   text-align: center;
+  border: 1px solid #374151;
 }
 
 .popup-icon {
-  font-size: 3.75rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -328,23 +331,24 @@ body {
 }
 
 .popup-button {
-  padding: 0.75rem 1.5rem;
-  background: #374151;
-  color: #d1d5db;
+  background: #3b82f6;
+  color: white;
   border: none;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .popup-button:hover {
-  background: #4b5563;
+  background: #2563eb;
 }
 
-/* ===== SCROLL INDICATOR ===== */
+/* ===== INDICADOR DE SCROLL ===== */
 .scroll-indicator {
   margin-top: 3rem;
+  animation: bounce 2s infinite;
   transition: all 0.5s ease-in-out;
 }
 
@@ -355,7 +359,6 @@ body {
   border-radius: 9999px;
   display: flex;
   justify-content: center;
-  position: relative;
 }
 
 .scroll-indicator-dot {
@@ -374,29 +377,26 @@ body {
 
 /* ===== FOOTER ===== */
 .footer {
-  background: black;
+  background-color: #000000;
   color: white;
-  padding: 3rem 1rem;
-  text-align: center;
+  padding: 3rem 0;
+  margin-top: 0;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-  /* Deshabilitar efectos parallax en móvil para mejor rendimiento */
   .parallax-layer {
-    background-attachment: scroll !important;
-    transform: none !important;
+    background-attachment: scroll;
   }
   
-  /* Optimizar animaciones en móvil */
   .animate-fade-in,
   .animate-slide-up {
-    animation-duration: 0.4s;
+    animation: none;
   }
   
-  /* Reducir sombras y efectos en móvil */
   .hero-avatar {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    width: 6rem;
+    height: 6rem;
   }
   
   .project-card:hover {
@@ -407,36 +407,31 @@ body {
     transform: none;
   }
   
-  /* Optimizar grid de tecnologías */
   .tech-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1rem;
   }
   
-  /* Reducir padding en secciones */
   .content-section {
     padding: 1.5rem;
   }
   
-  /* Optimizar scroll en móvil */
   body {
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: auto;
+    font-size: 0.875rem;
   }
   
-  /* Reducir complejidad de gradientes en móvil */
   .parallax-bg-2,
   .parallax-bg-3 {
-    background: none;
+    display: none;
   }
   
   .hero-avatar {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
   }
   
   .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   
   .section-title {
@@ -450,12 +445,11 @@ body {
   }
   
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   
   .tech-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
   }
   
   .tech-item {
@@ -463,8 +457,8 @@ body {
   }
   
   .tech-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
 
@@ -505,19 +499,56 @@ body {
   margin-left: 1.5rem;
 }
 
-section#contacto.bg-card-translucido {
-  background: rgba(31,41,55,0.5) !important;
+/* ===== ESTILOS ESPECÍFICOS PARA POPUP ===== */
+#popup {
+  background: rgba(0, 0, 0, 0.8) !important;
 }
 
-p, span, div, label, textarea, input, button {
+#popup .bg-gray-800 {
+  background: #1f2937 !important;
+  border: 1px solid #374151 !important;
+}
+
+#popup p {
+  color: #f3f4f6 !important;
+}
+
+#closePopup {
+  background: #3b82f6 !important;
+  color: white !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+}
+
+#closePopup:hover {
+  background: #2563eb !important;
+}
+
+/* ===== RESET DE FONT-WEIGHT Y SUBRAYADO ESTÉTICO ===== */
+
+/* Reset de font-weight para texto normal */
+p, span, div, label, textarea, input {
   font-weight: normal !important;
 }
 
+/* Solo títulos específicos en bold */
 h1, h2, h3 {
-  font-weight: bold !important;
+  font-weight: bold;
 }
 
-/* ===== SUBRAYADO ESTÉTICO PARA NAVEGACIÓN ===== */
+/* Parágrafos específicos sin bold */
+.text-lg, .text-xl, .text-gray-400, .text-gray-300 {
+  font-weight: normal !important;
+}
+
+/* ===== ELIMINAR SUBRAYADO POR DEFECTO ===== */
+a {
+  text-decoration: none !important;
+}
+
+/* ===== SUBRAYADO ESTÉTICO ===== */
+
+/* Navegación principal */
 .nav-link {
   position: relative;
   transition: color 0.3s ease;
@@ -540,7 +571,110 @@ h1, h2, h3 {
   width: 100%;
 }
 
-/* Subrayado permanente para el enlace activo en la navegación */
-.nav-link.active::after {
+/* Enlaces de redes sociales */
+.social-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.social-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -6px;
+  left: 50%;
+  background: linear-gradient(90deg, #d1d5db, #9ca3af);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+.social-link:hover::after {
   width: 100%;
+}
+
+/* Títulos de proyectos */
+.project-title {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.project-title::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #d1d5db, #9ca3af);
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+
+.project-card:hover .project-title::after {
+  width: 100%;
+}
+
+/* Nombres de tecnologías */
+.tech-name {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.tech-name::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 50%;
+  background: linear-gradient(90deg, #d1d5db, #9ca3af);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+.tech-item:hover .tech-name::after {
+  width: 80%;
+}
+
+/* Logo */
+.logo-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.logo-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #ffffff, #d1d5db);
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+
+.logo-link:hover::after {
+  width: 100%;
+}
+
+/* ===== ESTILOS PARA SECCIONES ESPECÍFICAS ===== */
+section#contacto.bg-card-translucido {
+  background: transparent;
+}
+
+/* ===== CONFIGURACIÓN DE TAILWIND PERSONALIZADA ===== */
+@layer utilities {
+  .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  }
+  
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 } 

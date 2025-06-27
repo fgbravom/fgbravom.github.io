@@ -17,10 +17,10 @@
       <div class="flex items-center justify-between">
         <a href="/index.html" class="text-xl font-semibold text-white hover:text-gray-300 transition-colors logo-link nav-link" id="logo-link">fgbravom</a>
         <div class="hidden md:flex space-x-6">
-          <a href="/sobremi.html" class="text-gray-300 hover:text-white transition-colors nav-link active font-bold">Sobre mí</a>
-          <a href="/proyectos.html" class="text-gray-300 hover:text-white transition-colors nav-link">Proyectos</a>
-          <a href="/tecnologias.html" class="text-gray-300 hover:text-white transition-colors nav-link">Tecnologías</a>
-          <a href="/index.html#contacto" class="text-gray-300 hover:text-white transition-colors nav-link">Contacto</a>
+          <a href="/sobremi.html" class="text-gray-300 hover:text-white transition-colors nav-link active font-bold" data-page="sobremi">Sobre mí</a>
+          <a href="/proyectos.html" class="text-gray-300 hover:text-white transition-colors nav-link" data-page="proyectos">Proyectos</a>
+          <a href="/tecnologias.html" class="text-gray-300 hover:text-white transition-colors nav-link" data-page="tecnologias">Tecnologías</a>
+          <a href="/index.html#contacto" class="text-gray-300 hover:text-white transition-colors nav-link" data-page="contacto">Contacto</a>
         </div>
         <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,14 +30,15 @@
       </div>
       <div id="mobile-menu" class="md:hidden hidden absolute left-0 right-0 top-full bg-black border-b border-gray-800 shadow-lg pb-4 z-50">
         <div class="flex flex-col space-y-3 px-6 pt-4">
-          <a href="/sobremi.html" class="text-gray-300 hover:text-white transition-colors py-2 nav-link active font-bold">Sobre mí</a>
-          <a href="/proyectos.html" class="text-gray-300 hover:text-white transition-colors py-2 nav-link">Proyectos</a>
-          <a href="/tecnologias.html" class="text-gray-300 hover:text-white transition-colors py-2 nav-link">Tecnologías</a>
-          <a href="/index.html#contacto" class="text-gray-300 hover:text-white transition-colors py-2 nav-link">Contacto</a>
+          <a href="/sobremi.html" class="text-gray-300 hover:text-white transition-colors py-2 nav-link active font-bold" data-page="sobremi">Sobre mí</a>
+          <a href="/proyectos.html" class="text-gray-300 hover:text-white transition-colors py-2 nav-link" data-page="proyectos">Proyectos</a>
+          <a href="/tecnologias.html" class="text-gray-300 hover:text-white transition-colors py-2 nav-link" data-page="tecnologias">Tecnologías</a>
+          <a href="/index.html#contacto" class="text-gray-300 hover:text-white transition-colors py-2 nav-link" data-page="contacto">Contacto</a>
         </div>
       </div>
     </div>
   </nav>
+  
   <main class="flex-1 flex flex-col items-center justify-center py-16 px-4">
     <article class="max-w-2xl w-full text-center">
       <h1 class="text-3xl font-bold mb-8 text-gray-200">Sobre mí</h1>
@@ -52,11 +53,14 @@
       </p>
     </article>
   </main>
+  
   <footer class="bg-black text-white py-12 mt-0">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <p class="text-gray-400">Desarrollado por <span class="text-white font-medium">fgbravom</span></p>
     </div>
   </footer>
+  
+  <script src="js/navigation.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html> 
