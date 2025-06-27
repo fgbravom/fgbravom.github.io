@@ -31,7 +31,7 @@ const PROJECTS_DATA = [
     estado: 'Trabajo actual',
     fecha: '28 de septiembre de 2022 0:47',
     descripcion: 'Landing page para la empresa Daia.',
-    imagen: 'https://placehold.co/600x400?text=daia.cl'
+    imagen: 'https://drive.google.com/file/d/1dO-hy3fKXeX7WoCcdy71GAV25TIfgtQm/view?usp=drive_link'
   },
   {
     id: 4,
