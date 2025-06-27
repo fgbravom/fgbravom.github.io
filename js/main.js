@@ -120,13 +120,14 @@ function setupMobileMenu() {
   });
 }
 
-// ===== INDICADOR DE SCROLL =====
+// ===== INDICADOR DE SCROLL OPTIMIZADO =====
 function setupScrollIndicator() {
   const scrollIndicator = document.getElementById('scroll-indicator');
   
   if (!scrollIndicator) return;
 
-  window.addEventListener('scroll', () => {
+  // Usar throttling para mejorar rendimiento
+  const throttledScrollHandler = throttle(() => {
     const scrollY = window.scrollY;
     const maxScroll = 200;
     
@@ -141,21 +142,42 @@ function setupScrollIndicator() {
       scrollIndicator.style.opacity = '1';
       scrollIndicator.style.transform = 'translateY(0)';
     }
-  });
+  }, 16); // ~60fps
+
+  window.addEventListener('scroll', throttledScrollHandler, { passive: true });
 }
 
-// ===== EFECTO PARALLAX =====
+// ===== EFECTO PARALLAX OPTIMIZADO =====
 function setupParallaxEffect() {
-  window.addEventListener('scroll', () => {
+  // Solo aplicar parallax en desktop para mejor rendimiento en móvil
+  if (window.innerWidth <= 768) return;
+
+  const parallaxLayers = document.querySelectorAll('.parallax-layer');
+  if (parallaxLayers.length === 0) return;
+
+  // Usar throttling y requestAnimationFrame para mejor rendimiento
+  let ticking = false;
+  
+  const updateParallax = () => {
     const scrolled = window.pageYOffset;
-    const parallaxLayers = document.querySelectorAll('.parallax-layer');
     
     parallaxLayers.forEach(layer => {
       const speed = layer.getAttribute('data-speed') || 0.1;
       const yPos = -(scrolled * speed);
       layer.style.transform = `translateY(${yPos}px)`;
     });
-  });
+    
+    ticking = false;
+  };
+
+  const throttledParallaxHandler = throttle(() => {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, 16);
+
+  window.addEventListener('scroll', throttledParallaxHandler, { passive: true });
 }
 
 // ===== ENLACE DEL LOGO =====
@@ -177,7 +199,20 @@ function setupLogoLink() {
   }
 }
 
-// ===== UTILIDADES =====
+// ===== UTILIDADES OPTIMIZADAS =====
+function throttle(func, limit) {
+  let inThrottle;
+  return function() {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  }
+}
+
 function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -190,7 +225,7 @@ function debounce(func, wait) {
   };
 }
 
-// ===== ANIMACIONES DE ENTRADA =====
+// ===== ANIMACIONES DE ENTRADA OPTIMIZADAS =====
 function animateOnScroll() {
   const observerOptions = {
     threshold: 0.1,
