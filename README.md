@@ -1,23 +1,102 @@
-# Felipe Bravo Miranda - Portfolio Personal
+# Portfolio Personal - Felipe Bravo Miranda
 
-Portfolio personal de Felipe Bravo Miranda, Analista de Sistemas en Daia Systems. Especialista en documentación, automatización y desarrollo de herramientas internas.
+Portfolio personal de Felipe Bravo Miranda, Analista de Sistemas en Daia Systems. Sitio optimizado con Vite, Tailwind CSS y mejores prácticas de performance y SEO.
 
-## 🚀 Características
+## 🚀 Estado de Refactorización
 
-- **Diseño Moderno**: Interfaz elegante con efectos parallax y animaciones suaves
-- **Responsive**: Optimizado para dispositivos móviles y desktop
-- **Performance**: Código optimizado para máxima velocidad de carga
-- **SEO Friendly**: Meta tags optimizados para motores de búsqueda
-- **Accesibilidad**: Navegación intuitiva y accesible
+### ✅ Completado (Fase 1-3 parcial)
 
-## 🛠️ Tecnologías Utilizadas
+- ✅ **Build system configurado** (Vite + Tailwind + PostCSS)
+- ✅ **Optimización de imágenes** (WebP/AVIF, -27.4% de tamaño)
+- ✅ **Sitemap.xml y robots.txt** generados
+- ✅ **Estructura modular JavaScript** iniciada
+- ✅ **Configuración TypeScript** para JavaScript (jsconfig.json)
 
-- **HTML5**: Estructura semántica y accesible
-- **CSS3**: Estilos modernos con Tailwind CSS y animaciones personalizadas
-- **JavaScript**: Funcionalidad interactiva y modular
-- **Tailwind CSS**: Framework de utilidades para diseño rápido
-- **Font Awesome**: Iconografía moderna
-- **Devicon**: Iconos de tecnologías de desarrollo
+### 🚧 Pendiente (Fase 3-8)
+
+- ⏳ Refactorización completa de JavaScript (componentes, utils)
+- ⏳ Implementación de SEO técnico (JSON-LD structured data)
+- ⏳ Actualización de HTML con lazy loading y picture elements
+- ⏳ Accesibilidad (ARIA attributes, semantic HTML)
+- ⏳ GitHub Actions CI/CD
+- ⏳ Testing y validación
+
+## 📦 Instalación
+
+### Requisitos previos
+
+- Node.js >= 18.0.0
+- npm >= 9.0.0
+
+### Instalar dependencias
+
+```bash
+npm install
+```
+
+## 🛠️ Scripts Disponibles
+
+### Desarrollo
+
+```bash
+npm run dev
+```
+
+Inicia servidor de desarrollo con HMR en `http://localhost:5173`
+
+### Build de Producción
+
+```bash
+npm run build
+```
+
+Genera build optimizado en carpeta `dist/`
+
+**Proceso automático**:
+1. Genera sitemap.xml (prebuild hook)
+2. Compila y minifica HTML/CSS/JS
+3. Optimiza assets y genera hashes
+4. Aplica PurgeCSS a Tailwind
+
+### Preview de Build
+
+```bash
+npm run preview
+```
+
+Sirve el build de producción en `http://localhost:4173`
+
+### Optimización de Imágenes
+
+```bash
+npm run optimize-images
+```
+
+**Genera**:
+- Formatos WebP y AVIF
+- Srcsets responsivos (400w, 800w, 1200w, 1600w)
+- Fallback JPG comprimido
+- Backup de originales en `assets/images/originals/`
+
+**Resultados actuales**:
+- Original: 2.68 MB → Optimizado: 1.94 MB
+- Ahorro: 27.4%
+
+### Validación HTML
+
+```bash
+npm run test:html
+```
+
+Valida todos los archivos HTML con reglas de accesibilidad y estándares.
+
+### Testing de Accesibilidad
+
+```bash
+npm run test:a11y
+```
+
+Ejecuta auditoría de accesibilidad con Axe (requiere servidor corriendo).
 
 ## 📁 Estructura del Proyecto
 
@@ -25,51 +104,185 @@ Portfolio personal de Felipe Bravo Miranda, Analista de Sistemas en Daia Systems
 fgbravom.github.io/
 ├── assets/
 │   └── images/
-│       └── perfil.jpg
-├── components/
-│   ├── navigation.html
-│   └── footer.html
+│       ├── originals/          # Backups de imágenes originales
+│       ├── *.webp              # Imágenes optimizadas WebP
+│       ├── *.avif              # Imágenes optimizadas AVIF
+│       └── *-{400,800,1200,1600}w.* # Srcsets responsivos
 ├── css/
-│   └── styles.css
+│   └── styles.css              # Estilos personalizados (legacy)
 ├── js/
-│   ├── data.js
-│   ├── main.js
-│   ├── navigation.js
-│   └── projects.js
-├── index.html
-├── proyectos.html
-├── sobremi.html
-├── tecnologias.html
-└── README.md
+│   ├── modules/
+│   │   ├── api/                # Módulos de API (contact.js)
+│   │   ├── components/         # Componentes UI
+│   │   ├── data/               # ✅ Datos (projects, technologies)
+│   │   │   ├── projects.js
+│   │   │   └── technologies.js
+│   │   ├── seo/                # Módulos SEO (structured-data, meta-tags)
+│   │   ├── utils/              # Utilidades (dom, performance, sanitize)
+│   │   └── config.js           # ✅ Configuración global
+│   ├── data.js                 # Legacy - migrar a modules/data/
+│   ├── main.js                 # Legacy - refactorizar
+│   ├── navigation.js           # Legacy - refactorizar
+│   └── projects.js             # Legacy - refactorizar
+├── public/
+│   ├── sitemap.xml             # ✅ Generado automáticamente
+│   └── robots.txt              # ✅ Configurado
+├── scripts/
+│   ├── optimize-images.js      # ✅ Script de optimización
+│   └── generate-sitemap.js     # ✅ Script de generación sitemap
+├── index.html                  # Homepage
+├── sobremi.html               # Página sobre mí
+├── proyectos.html             # Galería de proyectos
+├── tecnologias.html           # Stack tecnológico
+├── package.json               # ✅ Dependencias y scripts
+├── vite.config.js             # ✅ Configuración Vite
+├── tailwind.config.js         # ✅ Configuración Tailwind
+├── postcss.config.js          # ✅ Configuración PostCSS
+└── jsconfig.json              # ✅ TypeScript checking
+
+✅ = Completado | ⏳ = Pendiente
 ```
 
-## 🎯 Optimizaciones Implementadas
+## 🎯 Próximos Pasos (Guía de Implementación)
 
-### 1. **Modularización del Código**
-- **JavaScript modular**: Separación de funcionalidades en archivos específicos
-  - `navigation.js`: Manejo de navegación y menú móvil
-  - `projects.js`: Renderización de proyectos
-  - `main.js`: Funcionalidades principales (formulario, parallax, etc.)
-  - `data.js`: Datos de proyectos y tecnologías
+Consulta el **plan completo de refactorización** en:
+`C:\Users\Pipe\.claude\plans\effervescent-moseying-charm.md`
 
-### 2. **CSS Optimizado**
-- **Estilos centralizados**: Todos los estilos en `css/styles.css`
-- **Eliminación de CSS inline**: Mejor mantenibilidad y rendimiento
-- **Animaciones optimizadas**: Uso de `will-change` y `transform3d`
-- **Responsive design**: Media queries optimizadas
+### Quick Start - Verificar Build
 
-### 3. **Estructura HTML Mejorada**
-- **Componentes reutilizables**: Navegación y footer como componentes
-- **Semántica mejorada**: Uso correcto de elementos HTML5
-- **Accesibilidad**: Atributos ARIA y navegación por teclado
+```bash
+# 1. Instalar dependencias (si no lo hiciste)
+npm install
 
-### 4. **Performance**
-- **Lazy loading**: Carga diferida de imágenes
-- **Throttling**: Optimización de eventos de scroll
-- **RequestAnimationFrame**: Animaciones fluidas
-- **Preconnect**: Conexiones precargadas para recursos externos
+# 2. Optimizar imágenes (ya ejecutado, pero puedes re-ejecutar)
+npm run optimize-images
 
-## 🎨 Características de Diseño
+# 3. Iniciar dev server
+npm run dev
+
+# 4. En otra terminal, hacer build
+npm run build
+
+# 5. Preview del build
+npm run preview
+```
+
+### Fase 3B: Completar Refactorización JavaScript
+
+Ver detalles completos en el plan. Resumen:
+
+1. **Crear `js/modules/utils/dom.js`** - Utilidades DOM seguras (sin innerHTML)
+2. **Refactorizar `js/projects.js`** - Usar createElement en lugar de innerHTML
+3. **Crear `js/modules/components/navigation.js`** - Navegación con ARIA
+4. **Crear `js/modules/api/contact.js`** - API de contacto con validación
+
+### Fase 4: SEO Técnico
+
+1. **Structured Data (JSON-LD)** - Schemas de Person, WebSite, CreativeWork
+2. **Meta Tags Dinámicos** - Títulos y descripciones únicos por página
+3. **Canonical URLs** - Prevenir contenido duplicado
+
+### Fase 5: Actualizar HTML
+
+1. **Eliminar Tailwind CDN** - Usar build de Vite
+2. **Picture elements** - Para imágenes optimizadas (WebP/AVIF)
+3. **Lazy loading** - `loading="lazy"` en todas las imágenes no-hero
+4. **Preload hero image** - `<link rel="preload" as="image">`
+
+### Fase 6: GitHub Actions CI/CD
+
+Crear `.github/workflows/deploy.yml` para deploy automático a GitHub Pages.
+
+### Fase 7: Accesibilidad
+
+1. **ARIA attributes** - `aria-label`, `aria-expanded`, `aria-controls`
+2. **Skip link** - "Saltar al contenido principal"
+3. **Semantic HTML** - `<main>`, `<nav>`, `<footer>` con roles
+4. **Keyboard navigation** - Escape para cerrar menú móvil
+
+### Fase 8: Validación
+
+```bash
+npm run test:html        # Validar HTML
+npm run test:a11y        # Auditoría de accesibilidad
+npx lighthouse http://localhost:4173 --view  # Performance audit
+```
+
+## 📊 Métricas Actuales vs Objetivo
+
+| Métrica | Antes | Actual | Objetivo | Estado |
+|---------|-------|--------|----------|--------|
+| **Page Size** | 2.9MB | 2.0MB | <500KB | 🟡 En progreso |
+| **Imágenes** | 2.7MB | 1.9MB | <300KB | ✅ Optimizado |
+| **Build Time** | N/A | ~5s | <10s | ✅ Excelente |
+| **LCP** | ~4.5s | - | <2.0s | ⏳ Pendiente medir |
+| **Lighthouse SEO** | ~75 | - | >95 | ⏳ Pendiente |
+
+## 🛠️ Tecnologías
+
+### Stack Actual (Refactorizado)
+
+- **Vite 5** - Build tool y dev server
+- **Tailwind CSS 3** - Framework CSS con PurgeCSS
+- **PostCSS** - Procesamiento CSS con Autoprefixer
+- **Sharp** - Optimización de imágenes
+- **ES6 Modules** - JavaScript modular
+- **TypeScript checking** - Type safety con JSDoc
+
+### Stack Legacy (A migrar)
+
+- HTML5 con Tailwind CDN
+- JavaScript vanilla (global scope)
+- CSS custom + Tailwind inline config
+
+## 🔧 Troubleshooting
+
+### Build Errors
+
+**Error: "Cannot find module 'sharp'"**
+```bash
+npm install --force
+```
+
+**Error: "Vite config not found"**
+```bash
+# Asegúrate de estar en el directorio raíz
+cd c:\Users\Pipe\Proyectos\Personales\fgbravom.github.io
+npm run dev
+```
+
+### Image Optimization
+
+**Las imágenes no se optimizan**
+```bash
+# Verificar que existen originales
+dir assets\images\*.png
+dir assets\images\*.jpg
+
+# Ejecutar manualmente
+npm run optimize-images
+```
+
+### Dev Server No Inicia
+
+```bash
+# Limpiar cache y reinstalar
+rmdir /s /q node_modules
+del package-lock.json
+npm install
+npm run dev
+```
+
+## 📚 Recursos y Documentación
+
+- **Plan completo**: `C:\Users\Pipe\.claude\plans\effervescent-moseying-charm.md`
+- **Vite Documentation**: https://vitejs.dev/
+- **Tailwind CSS**: https://tailwindcss.com/
+- **Schema.org**: https://schema.org/
+- **Web.dev (Lighthouse)**: https://web.dev/measure/
+- **MDN Web Docs**: https://developer.mozilla.org/
+
+## 🎨 Características de Diseño (Actuales)
 
 ### Efectos Visuales
 - **Parallax**: Efectos de profundidad en el hero section
@@ -78,110 +291,42 @@ fgbravom.github.io/
 - **Sombras**: Efectos de profundidad y elevación
 
 ### Tipografía
-- **Inter**: Fuente moderna y legible
+- **Inter**: Fuente moderna y legible (Google Fonts)
 - **Jerarquía clara**: Tamaños y pesos bien definidos
 - **Contraste optimizado**: Para mejor legibilidad
 
 ### Colores
-- **Tema oscuro**: Fondo negro con acentos grises
+- **Tema oscuro**: Fondo negro (#000000) con acentos grises
 - **Acentos**: Colores sutiles para elementos interactivos
 - **Consistencia**: Paleta de colores unificada
 
 ## 📱 Responsive Design
 
-### Breakpoints
-- **Mobile**: < 640px
-- **Tablet**: 640px - 768px
-- **Desktop**: > 768px
+### Breakpoints (Tailwind)
+- **Mobile**: < 640px (sm)
+- **Tablet**: 640px - 768px (md)
+- **Desktop**: > 768px (lg)
+- **Large Desktop**: > 1024px (xl)
 
 ### Adaptaciones
 - **Menú hamburguesa**: Navegación móvil optimizada
 - **Grid adaptativo**: Layouts que se ajustan al tamaño de pantalla
-- **Imágenes responsivas**: Optimización para diferentes dispositivos
+- **Imágenes responsivas**: Srcsets para diferentes dispositivos
 - **Touch friendly**: Elementos táctiles optimizados
-
-## 🚀 Funcionalidades
-
-### Navegación
-- **Navegación suave**: Scroll suave entre secciones
-- **Menú móvil**: Navegación optimizada para dispositivos móviles
-- **Página activa**: Indicador visual de la página actual
-- **Logo interactivo**: Enlace al inicio con animación
-
-### Proyectos
-- **Galería dinámica**: Renderización automática desde datos JSON
-- **Filtros**: Por categoría y estado
-- **Tarjetas interactivas**: Efectos hover y enlaces
-- **Responsive grid**: Layout adaptativo
-
-### Formulario de Contacto
-- **Validación**: Validación del lado del cliente
-- **API integration**: Envío a servicio externo
-- **Feedback visual**: Confirmación de envío
-- **Accesibilidad**: Labels y mensajes de error claros
-
-### Efectos Especiales
-- **Parallax**: Efectos de profundidad
-- **Scroll indicator**: Indicador de scroll animado
-- **Hover effects**: Efectos interactivos
-- **Loading states**: Estados de carga optimizados
-
-## 🔧 Configuración y Desarrollo
-
-### Requisitos
-- Navegador web moderno
-- Servidor web local (opcional para desarrollo)
-
-### Instalación
-1. Clona el repositorio
-2. Abre `index.html` en tu navegador
-3. ¡Listo para usar!
-
-### Desarrollo
-- **Estructura modular**: Fácil mantenimiento y escalabilidad
-- **Comentarios**: Código bien documentado
-- **Consistencia**: Patrones de código unificados
-- **Performance**: Optimizaciones implementadas
-
-## 📊 Métricas de Performance
-
-### Optimizaciones Implementadas
-- **CSS crítico**: Estilos críticos inline
-- **JavaScript modular**: Carga diferida de scripts
-- **Imágenes optimizadas**: Formatos modernos y compresión
-- **Caching**: Headers de cache optimizados
-- **Minificación**: Código minificado para producción
-
-### Resultados Esperados
-- **Lighthouse Score**: 90+ en todas las métricas
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s
-- **Cumulative Layout Shift**: < 0.1
-
-## 🌟 Características Destacadas
-
-### UX/UI
-- **Diseño intuitivo**: Navegación clara y lógica
-- **Feedback visual**: Estados interactivos claros
-- **Consistencia**: Patrones de diseño unificados
-- **Accesibilidad**: Cumple estándares WCAG
-
-### Código
-- **Modular**: Fácil mantenimiento y escalabilidad
-- **Optimizado**: Performance y SEO optimizados
-- **Documentado**: Código bien comentado
-- **Moderno**: Uso de tecnologías actuales
+- **Parallax desactivado en mobile**: Mejor performance
 
 ## 📞 Contacto
 
 - **GitHub**: [@fgbravom](https://github.com/fgbravom)
-- **Email**: [Contacto a través del formulario](https://fgbravom.github.io/#contacto)
-- **Sitio Web**: [https://fgbravom.github.io](https://fgbravom.github.io)
+- **Portfolio**: [https://fgbravom.github.io](https://fgbravom.github.io)
+- **Empresa**: Daia Systems
 
-## 📄 Licencia
+## 📝 Licencia
 
-Este proyecto es de uso personal y educativo. Todos los derechos reservados.
+MIT License - Felipe Bravo Miranda (@fgbravom)
 
 ---
 
-**Desarrollado con ❤️ por Felipe Bravo Miranda** 
+**Última actualización**: 2026-01-19
+**Estado**: Fase 1-3 (parcial) completada ✅ | Fases 4-8 pendientes ⏳
+**Próximo paso**: `npm run dev` para verificar build → Continuar Fase 3B

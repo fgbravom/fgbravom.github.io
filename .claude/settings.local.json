@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(dir:*)",
+      "Read(//c/**)",
+      "Bash(npm install)",
+      "Bash(npm run optimize-images:*)",
+      "Bash(node scripts/generate-sitemap.js:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

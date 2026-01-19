@@ -1,0 +1,39 @@
+# Robots.txt para fgbravom.github.io
+# Portfolio de Felipe Bravo Miranda
+
+# Permitir crawling completo
+User-agent: *
+Allow: /
+
+# Bloquear directorios innecesarios
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /dist/
+Disallow: /scripts/
+
+# Sitemap
+Sitemap: https://fgbravom.github.io/sitemap.xml
+
+# Crawl delay para evitar sobrecarga del servidor
+Crawl-delay: 1
+
+# Reglas específicas para bots de redes sociales
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Bots de Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /

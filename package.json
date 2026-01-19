@@ -1,0 +1,45 @@
+{
+  "name": "fgbravom-portfolio",
+  "version": "2.0.0",
+  "description": "Portfolio personal de Felipe Bravo Miranda - Analista de Sistemas",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prebuild": "node scripts/generate-sitemap.js",
+    "optimize-images": "node scripts/optimize-images.js",
+    "test:html": "html-validate *.html",
+    "test:a11y": "axe http://localhost:5173 --exit",
+    "test:all": "npm run test:html"
+  },
+  "keywords": [
+    "portfolio",
+    "felipe-bravo",
+    "analista-sistemas",
+    "daia-systems",
+    "documentacion-tecnica"
+  ],
+  "author": "Felipe Bravo Miranda <fgbravom>",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.4.11",
+    "tailwindcss": "^3.4.17",
+    "postcss": "^8.4.49",
+    "autoprefixer": "^10.4.20",
+    "vite-plugin-html": "^3.2.2",
+    "sharp": "^0.33.5",
+    "@vitejs/plugin-legacy": "^5.4.3",
+    "html-validate": "^8.25.1",
+    "@axe-core/cli": "^4.10.2",
+    "glob": "^11.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ]
+}
