@@ -97,18 +97,18 @@ export function createProjectCard(project) {
 
   // Imagen responsiva con efecto grayscale → color
   const picture = createResponsiveImage(project.imagen, project.titulo, {
-    className: 'w-full h-64 object-cover border-b-2 border-white/20 grayscale group-hover:grayscale-0 transition-all duration-300'
+    className: 'w-full h-48 object-cover border-b-2 border-white/20 grayscale group-hover:grayscale-0 transition-all duration-300'
   });
 
-  // Contenido con más padding para respiro visual
-  const content = createElement('div', { className: 'p-8 flex-1 flex flex-col space-y-5' });
+  // Contenido con padding balanceado
+  const content = createElement('div', { className: 'p-6 flex-1 flex flex-col space-y-4' });
 
   // Header con título y año badge invertido
-  const header = createElement('div', { className: 'flex items-start justify-between gap-4' });
+  const header = createElement('div', { className: 'flex items-start justify-between gap-3' });
 
   // Título grande y bold - tipografía dominante
   const title = createElement('h3', {
-    className: 'text-3xl font-black text-white leading-tight tracking-tight',
+    className: 'text-2xl font-black text-white leading-tight tracking-tight',
     textContent: project.titulo
   });
 
@@ -130,7 +130,7 @@ export function createProjectCard(project) {
 
   // Descripción más legible
   const description = createElement('p', {
-    className: 'text-gray-300 text-base leading-relaxed flex-1 font-light',
+    className: 'text-gray-300 text-sm leading-relaxed flex-1 font-light line-clamp-3',
     textContent: project.descripcion
   });
 
