@@ -1,3 +1,8 @@
+/* ===== DIRECTIVAS DE TAILWIND ===== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* ===== RESET Y CONFIGURACIÓN BASE ===== */
 * {
   margin: 0;
@@ -666,12 +671,30 @@ section#contacto.bg-card-translucido {
   background: transparent;
 }
 
+/* ===== ACCESIBILIDAD ===== */
+/* Skip Link - visible solo al recibir foco con teclado */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 100;
+  text-decoration: none;
+  border: 2px solid #fff;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* ===== CONFIGURACIÓN DE TAILWIND PERSONALIZADA ===== */
 @layer utilities {
   .bg-gradient-to-br {
     background: linear-gradient(to bottom right, var(--tw-gradient-stops));
   }
-  
+
   .bg-clip-text {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

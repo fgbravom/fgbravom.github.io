@@ -46,7 +46,10 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-black font-inter text-white">
-  
+
+  <!-- Skip Link para Accesibilidad -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
   <!-- Navigation -->
   <nav class="sticky top-0 z-50 bg-black border-b border-gray-800">
     <div class="max-w-4xl mx-auto px-6 py-4">
@@ -87,6 +90,7 @@
   </nav>
   
   <!-- Hero Section with Parallax -->
+  <main id="main-content">
   <header class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-16 md:py-24 parallax-container">
     <!-- Multiple Parallax Layers -->
     <div class="parallax-layer parallax-bg-1" data-speed="0.1"></div>
@@ -281,8 +285,9 @@
     </section>
 
   </header>
+  </main>
 
-  <footer class="bg-black text-white py-12 mt-0">
+  <footer class="bg-black text-white py-12 mt-0" role="contentinfo">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <p class="text-gray-400">Desarrollado por <span class="text-white font-medium">fgbravom</span></p>
     </div>
