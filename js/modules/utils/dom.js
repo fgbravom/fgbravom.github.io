@@ -90,62 +90,65 @@ export function createResponsiveImage(src, alt, options = {}) {
  * @returns {HTMLElement}
  */
 export function createProjectCard(project) {
+  // Card con diseño Brutal Minimalista - bordes gruesos, hover físico
   const card = createElement('div', {
-    className: 'bg-gray-800 rounded-2xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all flex flex-col overflow-hidden'
+    className: 'group bg-black rounded-2xl border-2 border-white/20 hover:border-white transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] flex flex-col overflow-hidden project-card-brutal'
   });
 
-  // Imagen responsiva
+  // Imagen responsiva con efecto grayscale → color
   const picture = createResponsiveImage(project.imagen, project.titulo, {
-    className: 'w-full h-40 object-cover'
+    className: 'w-full h-64 object-cover border-b-2 border-white/20 grayscale group-hover:grayscale-0 transition-all duration-300'
   });
 
-  // Contenido
-  const content = createElement('div', { className: 'p-4 flex-1 flex flex-col' });
+  // Contenido con más padding para respiro visual
+  const content = createElement('div', { className: 'p-8 flex-1 flex flex-col space-y-5' });
 
-  // Header con año y estado
-  const header = createElement('div', { className: 'flex items-center justify-between mb-2' });
+  // Header con título y año badge invertido
+  const header = createElement('div', { className: 'flex items-start justify-between gap-4' });
 
-  const yearBadge = createElement('span', {
-    className: 'text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded',
-    textContent: project.anio.toString()
-  });
-
-  const statusColor = getStatusColor(project.estado);
-  const statusBadge = createElement('span', {
-    className: `text-xs px-2 py-1 rounded ${statusColor}`,
-    textContent: project.estado
-  });
-
-  header.appendChild(yearBadge);
-  header.appendChild(statusBadge);
-
-  // Título
+  // Título grande y bold - tipografía dominante
   const title = createElement('h3', {
-    className: 'text-base font-bold text-white mb-1',
+    className: 'text-3xl font-black text-white leading-tight tracking-tight',
     textContent: project.titulo
   });
 
-  // Tags
-  const tagsContainer = createElement('div', { className: 'flex flex-wrap gap-2 mb-2' });
+  // Year badge invertido (blanco sobre negro)
+  const yearBadge = createElement('span', {
+    className: 'text-sm font-mono bg-white text-black px-3 py-1 rounded-md font-bold shrink-0',
+    textContent: project.anio.toString()
+  });
+
+  header.appendChild(title);
+  header.appendChild(yearBadge);
+
+  // Status badge con color
+  const statusColor = getStatusColor(project.estado);
+  const statusBadge = createElement('span', {
+    className: `text-xs font-mono px-2 py-1 rounded ${statusColor}`,
+    textContent: project.estado
+  });
+
+  // Descripción más legible
+  const description = createElement('p', {
+    className: 'text-gray-300 text-base leading-relaxed flex-1 font-light',
+    textContent: project.descripcion
+  });
+
+  // Tags con hover invertido
+  const tagsContainer = createElement('div', { className: 'flex flex-wrap gap-2' });
   project.etiquetas.forEach(tag => {
     const tagElement = createElement('span', {
-      className: 'text-xs bg-gray-600 text-gray-200 px-2 py-1 rounded',
+      className: 'text-xs font-mono border border-white/30 text-white px-3 py-1.5 rounded-lg hover:bg-white hover:text-black transition-colors cursor-default',
       textContent: tag
     });
     tagsContainer.appendChild(tagElement);
   });
 
-  // Descripción
-  const description = createElement('p', {
-    className: 'text-gray-400 text-xs mb-2 flex-1',
-    textContent: project.descripcion
-  });
-
   // Footer con fecha y enlace
-  const footer = createElement('div', { className: 'flex items-end justify-between mt-auto' });
+  const footer = createElement('div', { className: 'flex items-center justify-between pt-4 border-t border-white/10' });
 
   const date = createElement('span', {
-    className: 'text-xs text-gray-500',
+    className: 'text-xs text-gray-500 font-mono',
     textContent: project.fecha
   });
 
@@ -156,17 +159,17 @@ export function createProjectCard(project) {
       href: project.enlace,
       target: '_blank',
       rel: 'noopener noreferrer',
-      className: 'text-blue-400 hover:underline text-xs font-medium',
-      textContent: 'Ver más →'
+      className: 'inline-flex items-center gap-2 text-white font-bold text-sm hover:gap-3 transition-all uppercase tracking-wider',
+      textContent: 'Ver Proyecto →'
     });
     footer.appendChild(link);
   }
 
   // Ensamblar
   content.appendChild(header);
-  content.appendChild(title);
-  content.appendChild(tagsContainer);
+  content.appendChild(statusBadge);
   content.appendChild(description);
+  content.appendChild(tagsContainer);
   content.appendChild(footer);
 
   card.appendChild(picture);
