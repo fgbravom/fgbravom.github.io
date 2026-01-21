@@ -12,6 +12,7 @@ export default defineConfig({
         sobremi: resolve(__dirname, 'sobremi.html'),
         proyectos: resolve(__dirname, 'proyectos.html'),
         tecnologias: resolve(__dirname, 'tecnologias.html'),
+        contacto: resolve(__dirname, 'contacto.html'),
       },
     },
     // Optimizaciones
