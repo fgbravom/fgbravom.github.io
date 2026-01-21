@@ -9,6 +9,55 @@
 export function setupNavigation() {
   setupMobileMenu();
   highlightActivePage();
+  handleHashNavigation();
+}
+
+/**
+ * Maneja navegación a anchors (#contacto, #proyectos)
+ * Funciona incluso cuando se accede desde /index.html#anchor
+ */
+function handleHashNavigation() {
+  // Si hay un hash en la URL, hacer scroll al elemento
+  if (window.location.hash) {
+    // Esperar a que el DOM esté completamente cargado
+    setTimeout(() => {
+      const hash = window.location.hash;
+      const element = document.querySelector(hash);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, 100);
+  }
+
+  // Interceptar clicks en links con hash para scroll suave
+  document.querySelectorAll('a[href*="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+
+      // Si el link es a la misma página (/#contacto desde /)
+      if (href.startsWith('#') || href.startsWith('/#')) {
+        e.preventDefault();
+        const hash = href.replace('/', '');
+        const element = document.querySelector(hash);
+
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+
+          // Actualizar URL sin recargar
+          history.pushState(null, '', href);
+        }
+      }
+      // Si el link es a otra página con hash (/index.html#contacto desde /sobremi.html)
+      // Dejar que navegue normalmente, handleHashNavigation se encargará del scroll
+    });
+  });
 }
 
 /**
