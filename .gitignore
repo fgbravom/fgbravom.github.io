@@ -9,6 +9,9 @@ dist/
 build/
 .vite/
 
+# Public assets (copia de assets/ para Vite build)
+public/assets/
+
 # Environment variables
 .env
 .env.local

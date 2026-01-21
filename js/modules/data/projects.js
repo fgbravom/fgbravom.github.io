@@ -27,7 +27,7 @@ export const PROJECTS_DATA = [
     estado: 'Trabajo actual',
     fecha: '11 de febrero de 2023 17:21',
     descripcion: 'Gestión y documentación interna de Daia Systems.',
-    imagen: 'assets/images/espaciodetrabajo.webp'
+    imagen: '/assets/images/espaciodetrabajo.webp'
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ export const PROJECTS_DATA = [
     estado: 'Trabajo actual',
     fecha: '10 de enero de 2023 1:09',
     descripcion: 'Portal de documentación corporativa.',
-    imagen: 'assets/images/helpdaia.webp'
+    imagen: '/assets/images/helpdaia.webp'
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ export const PROJECTS_DATA = [
     estado: 'Trabajo actual',
     fecha: '28 de septiembre de 2022 0:47',
     descripcion: 'Landing page para la empresa Daia.',
-    imagen: 'assets/images/daia.cl.webp'
+    imagen: '/assets/images/daia.cl.webp'
   },
   {
     id: 4,
