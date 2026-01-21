@@ -66,23 +66,17 @@ body {
 }
 
 .parallax-bg-1 {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+  background: #000000;
   z-index: -3;
 }
 
 .parallax-bg-2 {
-  background-image: 
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 2px, transparent 2px),
-    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 2px, transparent 2px);
-  background-size: 60px 60px, 80px 80px;
+  background: #000000;
   z-index: -2;
 }
 
 .parallax-bg-3 {
-  background-image: 
-    radial-gradient(circle at 60% 40%, rgba(255,255,255,0.05) 1px, transparent 1px),
-    radial-gradient(circle at 40% 60%, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 40px 40px, 50px 50px;
+  background: #000000;
   z-index: -1;
 }
 
