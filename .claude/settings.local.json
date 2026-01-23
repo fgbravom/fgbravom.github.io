@@ -19,7 +19,8 @@
       "Bash(npm run preview:*)",
       "Bash(git reset:*)",
       "Bash(for file in sobremi.html proyectos.html tecnologias.html)",
-      "Bash(do sed -i 's|href=\"\"/#contacto\"\"|href=\"\"/contacto.html\"\"|g' \"$file\")"
+      "Bash(do sed -i 's|href=\"\"/#contacto\"\"|href=\"\"/contacto.html\"\"|g' \"$file\")",
+      "Bash(gh run list:*)"
     ]
   }
 }
