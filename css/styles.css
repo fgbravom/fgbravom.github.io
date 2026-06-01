@@ -13,12 +13,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #000000;
   color: #ffffff;
   line-height: 1.6;
-  /* Optimización para scroll suave */
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
@@ -46,39 +50,6 @@ body {
   will-change: transform, opacity;
 }
 
-/* ===== EFECTOS PARALLAX OPTIMIZADOS ===== */
-.parallax-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.parallax-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  will-change: transform;
-}
-
-.parallax-bg-1 {
-  background: #000000;
-  z-index: -3;
-}
-
-.parallax-bg-2 {
-  background: #000000;
-  z-index: -2;
-}
-
-.parallax-bg-3 {
-  background: #000000;
-  z-index: -1;
-}
 
 /* ===== NAVEGACIÓN ===== */
 .navbar {
@@ -476,6 +447,31 @@ body {
   50% { opacity: 0.5; }
 }
 
+/* ===== ACENTO Y BOTÓN PRIMARIO ===== */
+.accent-line {
+  background: var(--accent);
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-accent:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
 /* ===== FOOTER ===== */
 .footer {
   background-color: #000000;
@@ -486,55 +482,33 @@ body {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-  .parallax-layer {
-    background-attachment: scroll;
-  }
-  
   .animate-fade-in,
   .animate-slide-up {
     animation: none;
   }
-  
-  .hero-avatar {
-    width: 6rem;
-    height: 6rem;
-  }
-  
-  .project-card:hover {
-    transform: none;
-  }
-  
-  .tech-item:hover {
-    transform: none;
-  }
-  
-  .tech-grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1rem;
-  }
-  
-  .content-section {
-    padding: 1.5rem;
-  }
-  
-  body {
-    font-size: 0.875rem;
-  }
-  
-  .parallax-bg-2,
-  .parallax-bg-3 {
-    display: none;
-  }
-  
+
   .hero-avatar {
     width: 5rem;
     height: 5rem;
   }
-  
+
+  .project-card:hover {
+    transform: none;
+  }
+
+  .tech-item:hover {
+    transform: none;
+  }
+
   .tech-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
-  
+
+  .content-section {
+    padding: 1.5rem;
+  }
+
   .section-title {
     font-size: 1.5rem;
   }
@@ -625,22 +599,7 @@ body {
   background: #2563eb !important;
 }
 
-/* ===== RESET DE FONT-WEIGHT Y SUBRAYADO ESTÉTICO ===== */
-
-/* Reset de font-weight para texto normal */
-p, span, div, label, textarea, input {
-  font-weight: normal !important;
-}
-
-/* Solo títulos específicos en bold */
-h1, h2, h3 {
-  font-weight: bold;
-}
-
-/* Parágrafos específicos sin bold */
-.text-lg, .text-xl, .text-gray-400, .text-gray-300 {
-  font-weight: normal !important;
-}
+/* ===== SUBRAYADO ESTÉTICO ===== */
 
 /* ===== ELIMINAR SUBRAYADO POR DEFECTO ===== */
 a {
@@ -753,6 +712,7 @@ a {
   height: 2px;
   bottom: -4px;
   left: 0;
+  transform: none;
   background: linear-gradient(90deg, #ffffff, #d1d5db);
   transition: all 0.3s ease;
   border-radius: 1px;
