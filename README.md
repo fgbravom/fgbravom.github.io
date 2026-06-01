@@ -1,4 +1,4 @@
-# Portfolio Personal - Felipe Bravo Miranda
+﻿# Portfolio Personal - Felipe Bravo Miranda
 
 Portfolio personal de Felipe Bravo Miranda, Analista de Sistemas en Daia Systems. Sitio optimizado con Vite, Tailwind CSS y mejores prácticas de performance y SEO.
 
@@ -134,7 +134,7 @@ Ejecuta auditoría de accesibilidad con Axe (requiere servidor corriendo).
 ## 📁 Estructura del Proyecto
 
 ```
-fgbravom.github.io/
+pipecco.github.io/
 ├── assets/
 │   └── images/
 │       ├── originals/          # Backups de imágenes originales
@@ -280,7 +280,7 @@ npm install --force
 **Error: "Vite config not found"**
 ```bash
 # Asegúrate de estar en el directorio raíz
-cd c:\Users\Pipe\Proyectos\Personales\fgbravom.github.io
+cd c:\Users\Pipe\Proyectos\Personales\pipecco.github.io
 npm run dev
 ```
 
@@ -350,13 +350,13 @@ npm run dev
 
 ## 📞 Contacto
 
-- **GitHub**: [@fgbravom](https://github.com/fgbravom)
-- **Portfolio**: [https://fgbravom.github.io](https://fgbravom.github.io)
+- **GitHub**: [@pipecco](https://github.com/pipecco)
+- **Portfolio**: [https://pipecco.github.io](https://pipecco.github.io)
 - **Empresa**: Daia Systems
 
 ## 📝 Licencia
 
-MIT License - Felipe Bravo Miranda (@fgbravom)
+MIT License - Felipe Bravo Miranda (@pipecco)
 
 ---
 

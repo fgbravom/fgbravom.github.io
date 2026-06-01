@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Meta tags dinámicos para SEO
  * @module seo/meta-tags
  */
@@ -11,28 +11,28 @@ const META_CONFIGS = {
     title: 'Felipe Bravo Miranda | Analista de Sistemas | Portfolio',
     description: 'Portfolio de Felipe Bravo Miranda, Analista de Sistemas en Daia Systems. Especialista en documentación técnica, automatización de procesos y desarrollo de herramientas internas en Chile.',
     keywords: 'Felipe Bravo, Analista de Sistemas, Documentación Técnica, Automatización, Daia Systems, Desarrollador Chile, Portfolio',
-    ogImage: 'https://fgbravom.github.io/assets/images/perfil.jpg',
+    ogImage: 'https://pipecco.github.io/assets/images/perfil.jpg',
     ogType: 'website'
   },
   'proyectos': {
     title: 'Proyectos | Felipe Bravo Miranda | Portfolio',
     description: 'Explora mis proyectos: help.daia.cl, daia.cl, sistemas de documentación, herramientas de automatización y más. Trabajo actual y desarrollos anteriores.',
     keywords: 'Proyectos Felipe Bravo, Base de conocimientos, Documentación corporativa, help.daia.cl, Portfolio técnico',
-    ogImage: 'https://fgbravom.github.io/assets/images/espaciodetrabajo.jpg',
+    ogImage: 'https://pipecco.github.io/assets/images/espaciodetrabajo.jpg',
     ogType: 'website'
   },
   'sobremi': {
     title: 'Sobre Mí | Felipe Bravo Miranda | Analista de Sistemas',
     description: 'Conoce más sobre mi trayectoria como Analista de Sistemas en Daia Systems, mi enfoque en simplificar procesos complejos y mi filosofía de trabajo.',
     keywords: 'Felipe Bravo biografía, Analista Sistemas Chile, Daia Systems, Sobre mí, Trayectoria profesional',
-    ogImage: 'https://fgbravom.github.io/assets/images/perfil.jpg',
+    ogImage: 'https://pipecco.github.io/assets/images/perfil.jpg',
     ogType: 'profile'
   },
   'tecnologias': {
     title: 'Tecnologías | Felipe Bravo Miranda | Stack Técnico',
     description: 'Stack tecnológico: HTML, CSS, JavaScript, Python, Git, MySQL, AWS, Notion, React, y más. Herramientas y tecnologías que utilizo en mis proyectos.',
     keywords: 'Stack tecnológico, HTML, CSS, JavaScript, Python, Git, AWS, Notion, Tecnologías web',
-    ogImage: 'https://fgbravom.github.io/assets/images/perfil.jpg',
+    ogImage: 'https://pipecco.github.io/assets/images/perfil.jpg',
     ogType: 'website'
   }
 };

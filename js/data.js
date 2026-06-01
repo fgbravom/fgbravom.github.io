@@ -1,4 +1,4 @@
-// ===== DATOS DE PROYECTOS =====
+﻿// ===== DATOS DE PROYECTOS =====
 const PROJECTS_DATA = [
   {
     id: 1,
@@ -70,7 +70,7 @@ const PROJECTS_DATA = [
     id: 7,
     titulo: 'Bookmark Converter',
     anio: 2023,
-    enlace: 'https://github.com/fgbravom/bookmark-converter',
+    enlace: 'https://github.com/pipecco/bookmark-converter',
     etiquetas: ['Open Source', 'Herramienta'],
     estado: 'Trabajo actual',
     fecha: '15 de marzo de 2023 10:00',
@@ -114,7 +114,7 @@ const PROJECTS_DATA = [
     id: 11,
     titulo: 'Sitio personal',
     anio: 2024,
-    enlace: 'https://fgbravom.github.io',
+    enlace: 'https://pipecco.github.io',
     etiquetas: ['Portfolio', 'Personal'],
     estado: 'Trabajo actual',
     fecha: '1 de junio de 2024 12:00',
@@ -241,7 +241,7 @@ const TECHNOLOGIES_DATA = [
 // ===== DATOS PERSONALES =====
 const PERSONAL_DATA = {
   name: 'Felipe Bravo Miranda',
-  username: '@fgbravom',
+  username: '@pipecco',
   title: 'Analista de Sistemas',
   company: 'Daia Systems',
   description: 'Especialista en documentación, automatización y desarrollo de herramientas internas.',
@@ -251,7 +251,7 @@ const PERSONAL_DATA = {
     'Soy chileno, curioso por naturaleza, y siempre estoy buscando cómo mejorar las cosas desde lo técnico, pero también desde lo humano.'
   ],
   social: {
-    github: 'https://github.com/fgbravom',
+    github: 'https://github.com/pipecco',
     email: 'tu-correo@ejemplo.com'
   },
   avatar: 'assets/images/perfil.jpg'

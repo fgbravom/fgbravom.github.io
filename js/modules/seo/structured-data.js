@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Structured Data (JSON-LD) para SEO
  * @module seo/structured-data
  */
@@ -21,8 +21,8 @@ export function generatePersonSchema() {
       "name": PERSONAL_DATA.company,
       "url": "https://daia.cl"
     },
-    "url": "https://fgbravom.github.io",
-    "image": `https://fgbravom.github.io/${PERSONAL_DATA.avatar}`,
+    "url": "https://pipecco.github.io",
+    "image": `https://pipecco.github.io/${PERSONAL_DATA.avatar}`,
     "sameAs": [
       PERSONAL_DATA.social.github
     ],
@@ -47,7 +47,7 @@ export function generateWebSiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Felipe Bravo Miranda - Portfolio",
-    "url": "https://fgbravom.github.io",
+    "url": "https://pipecco.github.io",
     "description": "Portfolio personal de Felipe Bravo Miranda, Analista de Sistemas especializado en documentación, automatización y desarrollo de herramientas internas.",
     "author": {
       "@type": "Person",
@@ -70,7 +70,7 @@ export function generateCreativeWorkSchema(project) {
     "@type": "CreativeWork",
     "name": project.titulo,
     "description": project.descripcion,
-    "url": project.enlace || "https://fgbravom.github.io",
+    "url": project.enlace || "https://pipecco.github.io",
     "dateCreated": project.fecha,
     "creator": {
       "@type": "Person",
@@ -92,7 +92,7 @@ export function generateProfilePageSchema() {
     "mainEntity": generatePersonSchema(),
     "name": `Sobre ${PERSONAL_DATA.name}`,
     "description": PERSONAL_DATA.bio[0],
-    "url": "https://fgbravom.github.io/sobremi.html",
+    "url": "https://pipecco.github.io/sobremi.html",
     "inLanguage": "es-CL"
   };
 }
@@ -108,7 +108,7 @@ export function generateProjectsListSchema(projects) {
     "@type": "ItemList",
     "name": "Proyectos de Felipe Bravo Miranda",
     "description": "Galería de proyectos y trabajos realizados",
-    "url": "https://fgbravom.github.io/proyectos.html",
+    "url": "https://pipecco.github.io/proyectos.html",
     "numberOfItems": projects.length,
     "itemListElement": projects.map((project, index) => ({
       "@type": "ListItem",
@@ -117,7 +117,7 @@ export function generateProjectsListSchema(projects) {
         "@type": "CreativeWork",
         "name": project.titulo,
         "description": project.descripcion,
-        "url": project.enlace || "https://fgbravom.github.io"
+        "url": project.enlace || "https://pipecco.github.io"
       }
     }))
   };

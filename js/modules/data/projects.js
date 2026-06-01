@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Datos de proyectos del portfolio
  * @module data/projects
  */
@@ -88,7 +88,7 @@ export const PROJECTS_DATA = [
     id: 7,
     titulo: 'Bookmark Converter',
     anio: 2023,
-    enlace: 'https://github.com/fgbravom/bookmark-converter',
+    enlace: 'https://github.com/pipecco/bookmark-converter',
     etiquetas: ['Open Source', 'Herramienta'],
     estado: 'Trabajo actual',
     fecha: '15 de marzo de 2023 10:00',
@@ -132,7 +132,7 @@ export const PROJECTS_DATA = [
     id: 11,
     titulo: 'Sitio personal',
     anio: 2024,
-    enlace: 'https://fgbravom.github.io',
+    enlace: 'https://pipecco.github.io',
     etiquetas: ['Portfolio', 'Personal'],
     estado: 'Trabajo actual',
     fecha: '1 de junio de 2024 12:00',
