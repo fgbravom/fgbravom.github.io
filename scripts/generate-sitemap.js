@@ -1,4 +1,4 @@
-﻿import { promises as fs } from 'fs';
+import { promises as fs } from 'fs';
 import { glob } from 'glob';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = 'https://pipecco.github.io';
+const BASE_URL = 'https://fgbravom.github.io';
 const OUTPUT = path.resolve(__dirname, '../public/sitemap.xml');
 
 const priority = {

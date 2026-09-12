@@ -51,8 +51,5 @@ coverage/
 *.bak
 backup/
 
-# Legacy (archivos no utilizados)
-legacy/
-
 # Original images (mantener comprimidas en git)
 assets/images/originals/

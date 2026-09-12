@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Configuración global de la aplicación
  * @module config
  */
@@ -39,7 +39,7 @@ export const SITE_CONFIG = {
 /** @type {PersonalData} */
 export const PERSONAL_DATA = {
   name: 'Felipe Bravo Miranda',
-  username: '@pipecco',
+  username: '@fgbravom',
   title: 'Analista de Sistemas',
   company: 'Daia Systems',
   description: 'Especialista en documentación, automatización y desarrollo de herramientas internas.',
@@ -49,7 +49,7 @@ export const PERSONAL_DATA = {
     'Soy chileno, curioso por naturaleza, y siempre estoy buscando cómo mejorar las cosas desde lo técnico, pero también desde lo humano.'
   ],
   social: {
-    github: 'https://github.com/pipecco',
+    github: 'https://github.com/fgbravom',
     email: 'tu-correo@ejemplo.com'
   },
   avatar: 'assets/images/perfil.jpg'

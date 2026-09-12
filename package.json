@@ -1,5 +1,5 @@
-﻿{
-  "name": "pipecco-portfolio",
+{
+  "name": "fgbravom-portfolio",
   "version": "2.0.0",
   "description": "Portfolio personal de Felipe Bravo Miranda - Analista de Sistemas",
   "type": "module",
@@ -20,7 +20,7 @@
     "daia-systems",
     "documentacion-tecnica"
   ],
-  "author": "Felipe Bravo Miranda <pipeco>",
+  "author": "Felipe Bravo Miranda <fgbravom>",
   "license": "MIT",
   "devDependencies": {
     "vite": "^5.4.11",
