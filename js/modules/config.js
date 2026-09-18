@@ -50,7 +50,7 @@ export const PERSONAL_DATA = {
   ],
   social: {
     github: 'https://github.com/fgbravom',
-    email: 'tu-correo@ejemplo.com'
+    email: 'fgbravo.m@gmail.com'
   },
   avatar: 'assets/images/perfil.jpg'
 };
