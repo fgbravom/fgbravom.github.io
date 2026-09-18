@@ -93,7 +93,7 @@ export function generateProfilePageSchema() {
     "mainEntity": generatePersonSchema(),
     "name": `Sobre ${PERSONAL_DATA.name}`,
     "description": PERSONAL_DATA.bio[0],
-    "url": "https://fgbravom.github.io/sobremi.html",
+    "url": "https://fgbravom.github.io/sobremi",
     "inLanguage": "es-CL"
   };
 }
@@ -109,7 +109,7 @@ export function generateProjectsListSchema(projects) {
     "@type": "ItemList",
     "name": "Proyectos de Felipe Bravo Miranda",
     "description": "Galería de proyectos y trabajos realizados",
-    "url": "https://fgbravom.github.io/proyectos.html",
+    "url": "https://fgbravom.github.io/proyectos",
     "numberOfItems": projects.length,
     "itemListElement": projects.map((project, index) => ({
       "@type": "ListItem",
