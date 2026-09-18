@@ -3,7 +3,7 @@
  * @module seo/meta-tags
  */
 
-import { getCurrentPage } from '../utils/routes.js';
+import { getCurrentPage, getCanonicalURL } from '../utils/routes.js';
 
 /**
  * Configuración de meta tags por página
@@ -59,7 +59,7 @@ export function updateMetaTags(page) {
   setMetaProperty('og:description', config.description);
   setMetaProperty('og:image', config.ogImage);
   setMetaProperty('og:type', config.ogType);
-  setMetaProperty('og:url', window.location.href);
+  setMetaProperty('og:url', getCanonicalURL());
   setMetaProperty('og:site_name', 'Felipe Bravo Miranda - Portfolio');
 
   // Twitter Card
@@ -124,8 +124,7 @@ function setCanonicalURL() {
     link.rel = 'canonical';
     document.head.appendChild(link);
   }
-  // Remover query params y hash
-  link.href = window.location.href.split('?')[0].split('#')[0];
+  link.href = getCanonicalURL();
 }
 
 /**

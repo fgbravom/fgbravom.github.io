@@ -26,3 +26,24 @@ export function getCurrentPage(pathname = window.location.pathname) {
 
   return PAGES.includes(slug) ? slug : 'index';
 }
+
+/**
+ * Devuelve la url canónica de una página: sin extensión, query ni hash
+ *
+ * Cada documento responde en dos urls (/sobremi y /sobremi.html). La canónica
+ * es siempre la que no lleva extensión, para no reportar contenido duplicado.
+ *
+ * @param {string} [url=window.location.href] - Url a normalizar
+ * @returns {string} Url canónica absoluta
+ */
+export function getCanonicalURL(url = window.location.href) {
+  const parsed = new URL(url);
+
+  parsed.search = '';
+  parsed.hash = '';
+  parsed.pathname = parsed.pathname
+    .replace(/\/index\.html$/, '/')
+    .replace(/\.html$/, '');
+
+  return parsed.toString();
+}
