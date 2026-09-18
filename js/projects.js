@@ -23,7 +23,7 @@ export function renderFeaturedProjects(containerId = 'proyectos-galeria-principa
 
   // Renderizar proyectos destacados
   const featuredProjects = PROJECTS_DATA.slice(0, limit);
-  const projectCards = featuredProjects.map(project => createProjectCard(project));
+  const projectCards = featuredProjects.map((project, index) => createProjectCard(project, index));
 
   appendElements(container, projectCards);
 }
@@ -43,7 +43,7 @@ export function renderAllProjects(containerId = 'proyectos-galeria') {
   clearContainer(container);
 
   // Renderizar todos los proyectos
-  const projectCards = PROJECTS_DATA.map(project => createProjectCard(project));
+  const projectCards = PROJECTS_DATA.map((project, index) => createProjectCard(project, index));
 
   appendElements(container, projectCards);
 }
@@ -63,7 +63,7 @@ export function renderProjectsByStatus(estado, containerId = 'proyectos-galeria'
   clearContainer(container);
 
   const filteredProjects = PROJECTS_DATA.filter(p => p.estado === estado);
-  const projectCards = filteredProjects.map(project => createProjectCard(project));
+  const projectCards = filteredProjects.map((project, index) => createProjectCard(project, index));
 
   appendElements(container, projectCards);
 }

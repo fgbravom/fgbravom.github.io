@@ -87,13 +87,15 @@ export function createResponsiveImage(src, alt, options = {}) {
 /**
  * Crea tarjeta de proyecto segura
  * @param {Object} project - Datos del proyecto
+ * @param {number} [index=0] - Posición en la galería, para escalonar la animación de entrada
  * @returns {HTMLElement}
  */
-export function createProjectCard(project) {
+export function createProjectCard(project, index = 0) {
   // Card con diseño Brutal Minimalista - bordes gruesos, hover físico
   const card = createElement('div', {
-    className: 'group bg-black rounded-2xl border-2 border-white/20 hover:border-white transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] flex flex-col overflow-hidden project-card-brutal'
+    className: 'group bg-black rounded-2xl border-2 border-white/20 hover:border-white transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] flex flex-col overflow-hidden project-card-brutal animate-slide-up'
   });
+  card.style.animationDelay = `${index * 0.1}s`;
 
   // Imagen responsiva con efecto grayscale → color
   const picture = createResponsiveImage(project.imagen, project.titulo, {
