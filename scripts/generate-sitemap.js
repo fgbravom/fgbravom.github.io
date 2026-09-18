@@ -55,7 +55,8 @@ async function generateSitemap() {
 
     const urls = pages
       .map(page => {
-        const pagePath = page === 'index.html' ? '' : page;
+        // Url canonica: sin la extension .html (GitHub Pages la resuelve solo)
+        const pagePath = page === 'index.html' ? '' : page.replace(/\.html$/, '');
         const url = `${BASE_URL}/${pagePath}`;
         const pagePriority = priority[page] || '0.5';
         const pageChangefreq = changefreq[page] || 'monthly';
