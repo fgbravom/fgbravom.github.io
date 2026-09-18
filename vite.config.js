@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import { createHtmlPlugin } from 'vite-plugin-html';
 import legacy from '@vitejs/plugin-legacy';
 import { resolve } from 'path';
 
@@ -43,11 +42,6 @@ export default defineConfig({
 
   // Plugins
   plugins: [
-    // HTML transformations
-    createHtmlPlugin({
-      minify: true,
-    }),
-
     // Legacy browser support (ES5 fallback)
     legacy({
       targets: ['defaults', 'not IE 11'],
@@ -76,6 +70,9 @@ export default defineConfig({
   css: {
     postcss: './postcss.config.js',
   },
+
+  // Sitio multipagina: sin fallback a index.html, como GitHub Pages
+  appType: 'mpa',
 
   // Base path (para GitHub Pages)
   base: '/',
