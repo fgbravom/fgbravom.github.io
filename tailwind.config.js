@@ -1,10 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    './index.html',
-    './sobremi.html',
-    './proyectos.html',
-    './tecnologias.html',
+    // Glob sobre todas las paginas: listarlas una por una ya dejo a
+    // contacto.html fuera y Tailwind purgo las clases que solo usaba ella
+    './*.html',
     './js/**/*.js',
   ],
   theme: {
