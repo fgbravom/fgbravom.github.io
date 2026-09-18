@@ -5,6 +5,7 @@
 
 import { PROJECTS_DATA } from './modules/data/projects.js';
 import { createProjectCard, clearContainer, appendElements } from './modules/utils/dom.js';
+import { getCurrentPage } from './modules/utils/routes.js';
 
 /**
  * Renderiza proyectos destacados (homepage)
@@ -72,11 +73,11 @@ export function renderProjectsByStatus(estado, containerId = 'proyectos-galeria'
  * Inicializa renderizado de proyectos según página
  */
 function initProjects() {
-  const path = window.location.pathname;
+  const page = getCurrentPage();
 
-  if (path.includes('proyectos.html')) {
+  if (page === 'proyectos') {
     renderAllProjects();
-  } else if (path.includes('index.html') || path === '/' || path === '' || path.endsWith('/')) {
+  } else if (page === 'index') {
     renderFeaturedProjects();
   }
 }

@@ -3,6 +3,8 @@
  * @module seo/meta-tags
  */
 
+import { getCurrentPage } from '../utils/routes.js';
+
 /**
  * Configuración de meta tags por página
  */
@@ -124,18 +126,6 @@ function setCanonicalURL() {
   }
   // Remover query params y hash
   link.href = window.location.href.split('?')[0].split('#')[0];
-}
-
-/**
- * Detecta la página actual
- * @returns {string} Nombre de la página
- */
-export function getCurrentPage() {
-  const path = window.location.pathname;
-  if (path.includes('proyectos.html')) return 'proyectos';
-  if (path.includes('sobremi.html')) return 'sobremi';
-  if (path.includes('tecnologias.html')) return 'tecnologias';
-  return 'index';
 }
 
 /**

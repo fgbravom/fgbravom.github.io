@@ -4,6 +4,7 @@
  */
 
 import { PERSONAL_DATA } from '../config.js';
+import { getCurrentPage } from '../utils/routes.js';
 
 /**
  * Genera schema de Person (perfil personal)
@@ -138,16 +139,16 @@ export function injectStructuredData(schema) {
  * Inicializa structured data según la página actual
  */
 export function initStructuredData() {
-  const path = window.location.pathname;
+  const page = getCurrentPage();
 
   // Schema común para todas las páginas
   injectStructuredData(generatePersonSchema());
   injectStructuredData(generateWebSiteSchema());
 
   // Schemas específicos por página
-  if (path.includes('sobremi.html')) {
+  if (page === 'sobremi') {
     injectStructuredData(generateProfilePageSchema());
-  } else if (path.includes('proyectos.html')) {
+  } else if (page === 'proyectos') {
     // Se inicializará cuando los proyectos estén cargados
     // Ver: projects.js
   }
