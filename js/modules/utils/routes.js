@@ -6,7 +6,7 @@
 /**
  * Páginas del sitio, identificadas por su slug
  */
-const PAGES = ['sobremi', 'proyectos', 'tecnologias'];
+const PAGES = ['sobremi', 'proyectos', 'tecnologias', 'contacto'];
 
 /**
  * Detecta la página actual sin depender de la extensión .html
