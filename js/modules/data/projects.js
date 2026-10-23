@@ -153,7 +153,7 @@ export const PROJECTS_DATA = [
   {
     id: 13,
     titulo: 'Azul y Blanco',
-    anio: 2025,
+    anio: 2026,
     enlace: 'https://www.azulyblanco.cl',
     etiquetas: ['Sitio web', 'Next.js', 'Supabase'],
     estado: 'Trabajo actual',
