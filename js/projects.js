@@ -8,6 +8,14 @@ import { createProjectCard, clearContainer, appendElements } from './modules/uti
 import { getCurrentPage } from './modules/utils/routes.js';
 
 /**
+ * Proyectos ordenados del más nuevo al más antiguo (año, luego id)
+ * @returns {Object[]}
+ */
+function getSortedProjects() {
+  return [...PROJECTS_DATA].sort((a, b) => b.anio - a.anio || b.id - a.id);
+}
+
+/**
  * Renderiza proyectos destacados (homepage)
  * @param {string} containerId - ID del contenedor
  * @param {number} limit - Número de proyectos a mostrar
@@ -23,7 +31,7 @@ export function renderFeaturedProjects(containerId = 'proyectos-galeria-principa
   clearContainer(container);
 
   // Renderizar proyectos destacados
-  const featuredProjects = PROJECTS_DATA.slice(0, limit);
+  const featuredProjects = getSortedProjects().slice(0, limit);
   const projectCards = featuredProjects.map((project, index) => createProjectCard(project, index));
 
   appendElements(container, projectCards);
@@ -44,7 +52,7 @@ export function renderAllProjects(containerId = 'proyectos-galeria') {
   clearContainer(container);
 
   // Renderizar todos los proyectos
-  const projectCards = PROJECTS_DATA.map((project, index) => createProjectCard(project, index));
+  const projectCards = getSortedProjects().map((project, index) => createProjectCard(project, index));
 
   appendElements(container, projectCards);
 }
@@ -63,7 +71,7 @@ export function renderProjectsByStatus(estado, containerId = 'proyectos-galeria'
 
   clearContainer(container);
 
-  const filteredProjects = PROJECTS_DATA.filter(p => p.estado === estado);
+  const filteredProjects = getSortedProjects().filter(p => p.estado === estado);
   const projectCards = filteredProjects.map((project, index) => createProjectCard(project, index));
 
   appendElements(container, projectCards);
