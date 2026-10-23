@@ -159,7 +159,7 @@ export const PROJECTS_DATA = [
     estado: 'Trabajo actual',
     fecha: '22 de octubre de 2026 22:39',
     descripcion: 'Sitio del Club de Fútbol Amateur Azul y Blanco: programación, resultados, noticias, galerías y panel de administración.',
-    imagen: 'https://placehold.co/600x400?text=Azul+y+Blanco'
+    imagen: '/assets/images/azulyblanco.webp'
   },
   {
     id: 14,
@@ -170,7 +170,7 @@ export const PROJECTS_DATA = [
     estado: 'Trabajo actual',
     fecha: '26 de septiembre de 2026 13:08',
     descripcion: 'Combina, limpia y ordena marcadores de varios navegadores: duplicados, links rotos y agrupación por dominio. Todo corre en el navegador.',
-    imagen: 'https://placehold.co/600x400?text=Limpiamarcadores'
+    imagen: '/assets/images/limpiamarcadores.webp'
   },
   {
     id: 15,
@@ -181,7 +181,7 @@ export const PROJECTS_DATA = [
     estado: 'En desarrollo',
     fecha: '23 de mayo de 2026 23:48',
     descripcion: 'Analiza etiquetas nutricionales de alimentos chilenos y les asigna una nota del 1.0 al 7.0 según la Ley 20.606 de sellos.',
-    imagen: 'https://placehold.co/600x400?text=Lupapp'
+    imagen: '/assets/images/lupapp.webp'
   },
   {
     id: 16,
