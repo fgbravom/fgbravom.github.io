@@ -149,6 +149,50 @@ export const PROJECTS_DATA = [
     fecha: '15 de abril de 2023 11:00',
     descripcion: 'Herramienta para generar documentación automáticamente.',
     imagen: 'https://placehold.co/600x400?text=Documentador+Automatico'
+  },
+  {
+    id: 13,
+    titulo: 'Azul y Blanco',
+    anio: 2025,
+    enlace: 'https://www.azulyblanco.cl',
+    etiquetas: ['Sitio web', 'Next.js', 'Supabase'],
+    estado: 'Trabajo actual',
+    fecha: '22 de octubre de 2026 22:39',
+    descripcion: 'Sitio del Club de Fútbol Amateur Azul y Blanco: programación, resultados, noticias, galerías y panel de administración.',
+    imagen: 'https://placehold.co/600x400?text=Azul+y+Blanco'
+  },
+  {
+    id: 14,
+    titulo: 'Limpiamarcadores',
+    anio: 2026,
+    enlace: 'https://limpiamarcadores.vercel.app',
+    etiquetas: ['Open Source', 'Herramienta', 'JavaScript'],
+    estado: 'Trabajo actual',
+    fecha: '26 de septiembre de 2026 13:08',
+    descripcion: 'Combina, limpia y ordena marcadores de varios navegadores: duplicados, links rotos y agrupación por dominio. Todo corre en el navegador.',
+    imagen: 'https://placehold.co/600x400?text=Limpiamarcadores'
+  },
+  {
+    id: 15,
+    titulo: 'Lupapp',
+    anio: 2026,
+    enlace: 'https://lupapp.vercel.app',
+    etiquetas: ['Open Source', 'Next.js', 'IA'],
+    estado: 'En desarrollo',
+    fecha: '23 de mayo de 2026 23:48',
+    descripcion: 'Analiza etiquetas nutricionales de alimentos chilenos y les asigna una nota del 1.0 al 7.0 según la Ley 20.606 de sellos.',
+    imagen: 'https://placehold.co/600x400?text=Lupapp'
+  },
+  {
+    id: 16,
+    titulo: 'Imágenes con Historia',
+    anio: 2026,
+    enlace: '',
+    etiquetas: ['React', 'InsForge', 'Galería'],
+    estado: 'Trabajo actual',
+    fecha: '20 de julio de 2026 21:44',
+    descripcion: 'Galería de fotografías históricas del deporte chileno, con publicación semanal automatizada.',
+    imagen: 'https://placehold.co/600x400?text=Imagenes+con+Historia'
   }
 ];
 
