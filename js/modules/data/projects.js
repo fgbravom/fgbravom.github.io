@@ -49,7 +49,7 @@ export const PROJECTS_DATA = [
     estado: 'Trabajos anteriores',
     fecha: '8 de mayo de 2022 4:18',
     descripcion: 'Sistema web para documentación abierta al público.',
-    imagen: 'https://placehold.co/600x400?text=help.tuu.cl'
+    imagen: '/assets/images/helptuucl-home.webp'
   },
   {
     id: 8,
