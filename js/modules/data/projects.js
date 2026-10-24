@@ -30,17 +30,6 @@ export const PROJECTS_DATA = [
     imagen: '/assets/images/espaciodetrabajo.webp'
   },
   {
-    id: 2,
-    titulo: 'help.daia.cl',
-    anio: 2023,
-    enlace: 'https://help.daia.cl',
-    etiquetas: ['Base de conocimientos', 'NoCode'],
-    estado: 'Trabajo actual',
-    fecha: '10 de enero de 2023 1:09',
-    descripcion: 'Portal de documentación corporativa.',
-    imagen: '/assets/images/helpdaia.webp'
-  },
-  {
     id: 3,
     titulo: 'daia.cl',
     anio: 2022,
@@ -63,39 +52,6 @@ export const PROJECTS_DATA = [
     imagen: 'https://placehold.co/600x400?text=help.tuu.cl'
   },
   {
-    id: 5,
-    titulo: 'Centro de ayuda Haulmer',
-    anio: 2020,
-    enlace: 'https://haulmer.notion.site',
-    etiquetas: ['Base de conocimientos', 'NoCode'],
-    estado: 'Trabajo actual',
-    fecha: '5 de agosto de 2022 14:29',
-    descripcion: 'Centro de ayuda y certificación digital.',
-    imagen: 'https://placehold.co/600x400?text=Haulmer+Ayuda'
-  },
-  {
-    id: 6,
-    titulo: 'Documentación Haulmer',
-    anio: 2020,
-    enlace: '',
-    etiquetas: ['Base de conocimientos', 'NoCode', 'Trabajos anteriores'],
-    estado: 'Trabajos anteriores',
-    fecha: '8 de mayo de 2022 4:18',
-    descripcion: 'Documentación técnica y de procesos para Haulmer.',
-    imagen: 'https://placehold.co/600x400?text=Haulmer+Docs'
-  },
-  {
-    id: 7,
-    titulo: 'Bookmark Converter',
-    anio: 2023,
-    enlace: 'https://github.com/fgbravom/bookmark-converter',
-    etiquetas: ['Open Source', 'Herramienta'],
-    estado: 'Trabajo actual',
-    fecha: '15 de marzo de 2023 10:00',
-    descripcion: 'Conversor de HTML a CSV para marcadores.',
-    imagen: 'https://placehold.co/600x400?text=Bookmark+Converter'
-  },
-  {
     id: 8,
     titulo: 'ayuda.daia.cl',
     anio: 2025,
@@ -105,50 +61,6 @@ export const PROJECTS_DATA = [
     fecha: '23 de octubre de 2026 17:46',
     descripcion: 'Centro de ayuda de Daia Systems con la documentación de los módulos de DaiaERP.',
     imagen: '/assets/images/ayudadaia.webp'
-  },
-  {
-    id: 9,
-    titulo: 'API de automatización',
-    anio: 2023,
-    enlace: '',
-    etiquetas: ['API', 'Automatización'],
-    estado: 'Trabajo actual',
-    fecha: '20 de diciembre de 2023 9:30',
-    descripcion: 'API para automatización de procesos internos.',
-    imagen: 'https://placehold.co/600x400?text=API+Automatizacion'
-  },
-  {
-    id: 10,
-    titulo: 'Gestor de tareas',
-    anio: 2022,
-    enlace: '',
-    etiquetas: ['Herramienta', 'Productividad'],
-    estado: 'Trabajo actual',
-    fecha: '10 de noviembre de 2022 16:00',
-    descripcion: 'Aplicación para gestión de tareas y proyectos.',
-    imagen: 'https://placehold.co/600x400?text=Gestor+Tareas'
-  },
-  {
-    id: 11,
-    titulo: 'Sitio personal',
-    anio: 2024,
-    enlace: 'https://fgbravom.github.io',
-    etiquetas: ['Portfolio', 'Personal'],
-    estado: 'Trabajo actual',
-    fecha: '1 de junio de 2024 12:00',
-    descripcion: 'Sitio web personal y portafolio.',
-    imagen: 'https://placehold.co/600x400?text=Sitio+Personal'
-  },
-  {
-    id: 12,
-    titulo: 'Documentador automático',
-    anio: 2023,
-    enlace: '',
-    etiquetas: ['Automatización', 'Documentación'],
-    estado: 'En desarrollo',
-    fecha: '15 de abril de 2023 11:00',
-    descripcion: 'Herramienta para generar documentación automáticamente.',
-    imagen: 'https://placehold.co/600x400?text=Documentador+Automatico'
   },
   {
     id: 13,
