@@ -97,14 +97,14 @@ export const PROJECTS_DATA = [
   },
   {
     id: 8,
-    titulo: 'help.daia.cl v2',
-    anio: 2024,
-    enlace: '',
-    etiquetas: ['En desarrollo', 'NoCode'],
-    estado: 'En desarrollo',
-    fecha: '1 de junio de 2024 12:00',
-    descripcion: 'Nueva versión de la plataforma de documentación.',
-    imagen: 'https://placehold.co/600x400?text=help.daia.cl+v2'
+    titulo: 'ayuda.daia.cl',
+    anio: 2025,
+    enlace: 'https://ayuda.daia.cl',
+    etiquetas: ['Base de conocimientos', 'Documentación'],
+    estado: 'Trabajo actual',
+    fecha: '23 de octubre de 2026 17:46',
+    descripcion: 'Centro de ayuda de Daia Systems con la documentación de los módulos de DaiaERP.',
+    imagen: '/assets/images/ayudadaia.webp'
   },
   {
     id: 9,
