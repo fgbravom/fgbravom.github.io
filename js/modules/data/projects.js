@@ -105,6 +105,17 @@ export const PROJECTS_DATA = [
     fecha: '20 de julio de 2026 21:44',
     descripcion: 'Galería de fotografías históricas del deporte chileno, con publicación semanal automatizada.',
     imagen: '/assets/images/imagenesconhistoria.webp'
+  },
+  {
+    id: 17,
+    titulo: 'help.haulmer.com',
+    anio: 2020,
+    enlace: 'https://help.haulmer.com/hc/',
+    etiquetas: ['Base de conocimientos', 'Documentación'],
+    estado: 'Trabajo actual',
+    fecha: '',
+    descripcion: 'Base de conocimientos de Haulmer con documentación de Web Hosting, Cloud Server y Servicio al cliente.',
+    imagen: '/assets/images/helphaulmer.webp'
   }
 ];
 
