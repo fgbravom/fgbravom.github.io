@@ -111,8 +111,8 @@ export const PROJECTS_DATA = [
     titulo: 'help.haulmer.com',
     anio: 2020,
     enlace: 'https://help.haulmer.com/hc/',
-    etiquetas: ['Base de conocimientos', 'Documentación'],
-    estado: 'Trabajo actual',
+    etiquetas: ['Base de conocimientos', 'Trabajos anteriores'],
+    estado: 'Trabajos anteriores',
     fecha: '',
     descripcion: 'Base de conocimientos de Haulmer con documentación de Web Hosting, Cloud Server y Servicio al cliente.',
     imagen: '/assets/images/helphaulmer.webp'
