@@ -26,7 +26,7 @@ export const PROJECTS_DATA = [
     etiquetas: ['Trabajo actual', 'Base de conocimientos'],
     estado: 'Trabajo actual',
     fecha: '11 de febrero de 2023 17:21',
-    descripcion: 'Gestión y documentación interna de Daia Systems.',
+    descripcion: 'Espacio de trabajo en Notion, montado y administrado por mí, para la gestión y documentación interna de Daia Systems.',
     imagen: '/assets/images/notiondaia.webp'
   },
   {
