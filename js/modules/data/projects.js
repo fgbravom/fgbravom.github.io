@@ -27,7 +27,7 @@ export const PROJECTS_DATA = [
     estado: 'Trabajo actual',
     fecha: '11 de febrero de 2023 17:21',
     descripcion: 'Gestión y documentación interna de Daia Systems.',
-    imagen: '/assets/images/espaciodetrabajo.webp'
+    imagen: '/assets/images/notiondaia.webp'
   },
   {
     id: 3,
