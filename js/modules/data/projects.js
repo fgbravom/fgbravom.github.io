@@ -187,12 +187,12 @@ export const PROJECTS_DATA = [
     id: 16,
     titulo: 'Imágenes con Historia',
     anio: 2026,
-    enlace: '',
+    enlace: 'https://imagenehistoria.vercel.app',
     etiquetas: ['React', 'InsForge', 'Galería'],
     estado: 'Trabajo actual',
     fecha: '20 de julio de 2026 21:44',
     descripcion: 'Galería de fotografías históricas del deporte chileno, con publicación semanal automatizada.',
-    imagen: 'https://placehold.co/600x400?text=Imagenes+con+Historia'
+    imagen: '/assets/images/imagenesconhistoria.webp'
   }
 ];
 
