@@ -38,7 +38,7 @@ export const PROJECTS_DATA = [
     estado: 'Trabajo actual',
     fecha: '28 de septiembre de 2022 0:47',
     descripcion: 'Landing page para la empresa Daia.',
-    imagen: '/assets/images/daia.cl.webp'
+    imagen: '/assets/images/daiacl-home.webp'
   },
   {
     id: 4,
