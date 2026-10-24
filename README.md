@@ -147,16 +147,18 @@ fgbravom.github.io/
 │   ├── modules/
 │   │   ├── api/                # Módulos de API (contact.js)
 │   │   ├── components/         # Componentes UI
-│   │   ├── data/               # ✅ Datos (projects, technologies)
-│   │   │   ├── projects.js
-│   │   │   └── technologies.js
+│   │   ├── data/               # ✅ Datos de proyectos
+│   │   │   └── projects.js
 │   │   ├── seo/                # Módulos SEO (structured-data, meta-tags)
-│   │   ├── utils/              # Utilidades (dom, performance, sanitize)
+│   │   ├── utils/              # Utilidades (dom, routes)
 │   │   └── config.js           # ✅ Configuración global
-│   ├── data.js                 # Legacy - migrar a modules/data/
-│   ├── main.js                 # Legacy - refactorizar
-│   ├── navigation.js           # Legacy - refactorizar
-│   └── projects.js             # Legacy - refactorizar
+│   ├── main.js                 # Entry point
+│   └── projects.js             # Renderizado de proyectos
+├── legacy/                     # Archivos en desuso (ver legacy/README.md)
+│   ├── assets/images/          # Capturas de proyectos retirados
+│   ├── components/             # Partials HTML antiguos
+│   ├── docs/                   # Guías y propuestas obsoletas
+│   └── js/                     # Código JS reemplazado
 ├── public/
 │   ├── sitemap.xml             # ✅ Generado automáticamente
 │   └── robots.txt              # ✅ Configurado
