@@ -1,6 +1,6 @@
 # Portfolio Personal - Felipe Bravo Miranda
 
-Portfolio personal de Felipe Bravo Miranda, Analista de Sistemas en Daia Systems. Sitio optimizado con Vite, Tailwind CSS y mejores prácticas de performance y SEO.
+Portfolio personal de Felipe Bravo Miranda, Ingeniero en Informáticas en Daia Systems. Sitio optimizado con Vite, Tailwind CSS y mejores prácticas de performance y SEO.
 
 ## 🚀 Estado de Refactorización
 

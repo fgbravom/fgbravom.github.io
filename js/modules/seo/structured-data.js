@@ -49,7 +49,7 @@ export function generateWebSiteSchema() {
     "@type": "WebSite",
     "name": "Felipe Bravo Miranda - Portfolio",
     "url": "https://fgbravom.github.io",
-    "description": "Portfolio personal de Felipe Bravo Miranda, Analista de Sistemas especializado en documentación, automatización y desarrollo de herramientas internas.",
+    "description": "Portfolio personal de Felipe Bravo Miranda, Ingeniero en Informáticas especializado en documentación, automatización y desarrollo de herramientas internas.",
     "author": {
       "@type": "Person",
       "name": PERSONAL_DATA.name
