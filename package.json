@@ -1,7 +1,7 @@
 {
   "name": "fgbravom-portfolio",
   "version": "2.0.0",
-  "description": "Portfolio personal de Felipe Bravo Miranda - Ingeniero en Informáticas",
+  "description": "Portfolio personal de Felipe Bravo Miranda - Ingeniero en informática",
   "type": "module",
   "scripts": {
     "dev": "vite",

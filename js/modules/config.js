@@ -13,8 +13,8 @@
 
 /** @type {SiteConfig} */
 export const SITE_CONFIG = {
-  title: 'Felipe Bravo Miranda - Ingeniero en Informáticas',
-  description: 'Portfolio personal de Felipe Bravo Miranda, Ingeniero en Informáticas en Daia Systems',
+  title: 'Felipe Bravo Miranda - Ingeniero en informática',
+  description: 'Portfolio personal de Felipe Bravo Miranda, Ingeniero en informática en Daia Systems',
   contactApi: import.meta.env.VITE_CONTACT_API || 'https://notion-contact-api.vercel.app/api/contacto',
   theme: {
     primaryColor: '#000000',
@@ -40,11 +40,11 @@ export const SITE_CONFIG = {
 export const PERSONAL_DATA = {
   name: 'Felipe Bravo Miranda',
   username: '@fgbravom',
-  title: 'Ingeniero en Informáticas',
+  title: 'Ingeniero en informática',
   company: 'Daia Systems',
   description: 'Especialista en documentación, automatización y desarrollo de herramientas internas.',
   bio: [
-    'Hola, soy Felipe y trabajo como Ingeniero en Informáticas en Daia Systems. Me dedico principalmente a documentar procesos, automatizar tareas, crear herramientas internas que faciliten el trabajo del equipo y brindar soporte técnico cuando se requiera de una mano.',
+    'Hola, soy Felipe y trabajo como Ingeniero en informática en Daia Systems. Me dedico principalmente a documentar procesos, automatizar tareas, crear herramientas internas que faciliten el trabajo del equipo y brindar soporte técnico cuando se requiera de una mano.',
     'Una de las cosas que más me gusta es encontrar formas de simplificar lo complejo. Por ejemplo, desarrollé help.daia.cl, la plataforma de documentación de la empresa, y también he construido varias herramientas que ayudan a que los flujos de trabajo sean más rápidos y eficientes.',
     'Soy chileno, curioso por naturaleza, y siempre estoy buscando cómo mejorar las cosas desde lo técnico, pero también desde lo humano.'
   ],

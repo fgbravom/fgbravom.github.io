@@ -10,22 +10,22 @@ import { getCurrentPage, getCanonicalURL } from '../utils/routes.js';
  */
 const META_CONFIGS = {
   'index': {
-    title: 'Felipe Bravo Miranda | Ingeniero en Informáticas | Portfolio',
-    description: 'Portfolio de Felipe Bravo Miranda, Ingeniero en Informáticas en Daia Systems. Especialista en documentación técnica, automatización de procesos y desarrollo de herramientas internas en Chile.',
-    keywords: 'Felipe Bravo, Ingeniero en Informáticas, Documentación Técnica, Automatización, Daia Systems, Desarrollador Chile, Portfolio',
+    title: 'Felipe Bravo Miranda | Ingeniero en Informática',
+    description: 'Portfolio de Felipe Bravo Miranda, Ingeniero en Informática en Daia Systems. Especialista en documentación técnica, automatización de procesos y desarrollo de herramientas internas en Chile.',
+    keywords: 'Felipe Bravo, Ingeniero en informática, Documentación Técnica, Automatización, Daia Systems, Desarrollador Chile, Portfolio',
     ogImage: 'https://fgbravom.github.io/assets/images/perfil.jpg',
     ogType: 'website'
   },
   'proyectos': {
-    title: 'Proyectos | Felipe Bravo Miranda | Portfolio',
+    title: 'Proyectos | Felipe Bravo Miranda',
     description: 'Explora mis proyectos: help.daia.cl, daia.cl, sistemas de documentación, herramientas de automatización y más. Trabajo actual y desarrollos anteriores.',
     keywords: 'Proyectos Felipe Bravo, Base de conocimientos, Documentación corporativa, help.daia.cl, Portfolio técnico',
     ogImage: 'https://fgbravom.github.io/assets/images/espaciodetrabajo.jpg',
     ogType: 'website'
   },
   'sobremi': {
-    title: 'Sobre Mí | Felipe Bravo Miranda | Ingeniero en Informáticas',
-    description: 'Conoce más sobre mi trayectoria como Ingeniero en Informáticas en Daia Systems, mi enfoque en simplificar procesos complejos y mi filosofía de trabajo.',
+    title: 'Sobre Mí | Felipe Bravo Miranda | Ingeniero en Informática',
+    description: 'Conoce más sobre mi trayectoria como Ingeniero en Informática en Daia Systems, mi enfoque en simplificar procesos complejos y mi filosofía de trabajo.',
     keywords: 'Felipe Bravo biografía, Analista Sistemas Chile, Daia Systems, Sobre mí, Trayectoria profesional',
     ogImage: 'https://fgbravom.github.io/assets/images/perfil.jpg',
     ogType: 'profile'
