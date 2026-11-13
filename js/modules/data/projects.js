@@ -107,6 +107,17 @@ export const PROJECTS_DATA = [
     imagen: '/assets/images/imagenesconhistoria.webp'
   },
   {
+    id: 18,
+    titulo: 'Dibuja y Adivina',
+    anio: 2026,
+    enlace: 'https://dibujayadivina-production.up.railway.app',
+    etiquetas: ['Juego', 'Multijugador', 'Tiempo real'],
+    estado: 'Trabajo actual',
+    fecha: '13 de noviembre de 2026 12:00',
+    descripcion: 'Juego multijugador de dibujar y adivinar: crea una sala, comparte el código con tus amigos y compitan por rondas, con chat en vivo. Sin registro.',
+    imagen: '/assets/images/dibujayadivina.webp'
+  },
+  {
     id: 17,
     titulo: 'help.haulmer.com',
     anio: 2020,
